@@ -1,1 +1,39 @@
 @use "../utils/variables" as *;
+
+.header {
+  background-color: $color-ivory;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: calc(178px + 212px + 780px);
+    padding-top: 40px;
+  }
+
+  &__logo {
+    min-width: 178px;
+    height: auto;
+  }
+
+  &__nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 420px;
+  }
+  &__nav-link {
+    font-family: "Poppins";
+    font-size: $fs-18-16;
+    color: $color-dark-maroon;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      color: $color-coral;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+    gap: 10px;
+  }
+}
