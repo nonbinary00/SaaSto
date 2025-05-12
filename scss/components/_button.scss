@@ -1,1 +1,39 @@
 @use "../utils/variables" as *;
+.button-type-1 {
+  padding: 16px 32px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: $fs-18-16;
+  color: $color-coral;
+  border-radius: 34px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-coral;
+    border-radius: 34px;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.button-type-2 {
+  padding: 16px 32px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: $fs-18-16;
+  color: $color-white;
+  background-color: $color-coral;
+  border-radius: 34px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+
+  &:hover {
+    color: $color-coral;
+    background-color: $color-ivory;
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}

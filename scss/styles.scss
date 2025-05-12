@@ -2,6 +2,7 @@
 @use "./utils/variables";
 @use "./base/base";
 @use "./layout/header";
-@use "./components/burger";
 @use "./components/button";
+@use "./components/burger";
+@use "./layout/hero-section.scss";
 @use "./layout/footer";

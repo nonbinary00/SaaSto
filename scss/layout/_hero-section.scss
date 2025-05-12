@@ -1,0 +1,72 @@
+@use "../utils/variables" as *;
+
+.hero-section {
+  padding-top: 220px;
+  background-color: $color-ivory;
+  background-image: url(../../assets/images/background_hero-section.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    width: 800px;
+    margin: 0 auto;
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: $fs-64-28;
+    line-height: calc(90px / 64px);
+    color: $color-dark-maroon;
+
+    &--accent {
+      background-image: url(../../assets/images/Shape.png);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+    }
+  }
+  &__text {
+    max-width: 596px;
+    margin: 24px auto 0;
+    font-weight: 400;
+    font-size: $fs-20-16;
+    line-height: calc(36px / 20px);
+    color: $color-chestnut;
+    opacity: 0.8;
+  }
+  &__button {
+    margin-top: 68px;
+
+    &--padding {
+      padding: 24px 40px;
+      border-radius: 40px;
+    }
+  }
+  &__statistics {
+    width: 77%;
+    margin-top: 182px;
+    border-top-left-radius: 2000px;
+  }
+  &__statistics-wrapper-wrapper {
+    display: flex;
+    gap: 192px;
+    margin-left: 455px;
+    padding-top: 98px;
+    padding-bottom: 15px;
+    background-color: $color-white;
+    clip-path: polygon(0 0, calc(100% - 165px) 0, 100% 100%, 0% 100%);
+  }
+  &__statistics-title {
+    font-family: "Poppins";
+    font-size: $fs-48-64;
+    font-weight: 600;
+    line-height: calc(64px / 48px);
+    color: $color-midnight-purple;
+  }
+  &__statistics-text {
+    font-size: $fs-18;
+    color: $color-charcoal;
+    opacity: 0.6;
+  }
+}
