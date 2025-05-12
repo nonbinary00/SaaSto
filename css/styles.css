@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* Для коректної роботи rem */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Відключення масштабування тексту в мобільних браузерах */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Або інший базовий шрифт */
+  background-color: #fff;
+  color: #000;
+}
+
+img,
+picture,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}/*# sourceMappingURL=styles.css.map */
