@@ -52,6 +52,10 @@ ol {
 body {
   max-width: 1920px;
   margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
   font-family: "Inter", sans-serif;
 }
 
@@ -79,7 +83,6 @@ body {
   width: 420px;
 }
 .header__nav-link {
-  font-family: "Poppins";
   font-size: 18px;
   color: #1c0e0d;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -131,9 +134,10 @@ body {
 .hero-section {
   padding-top: 220px;
   background-color: #fff8f2;
-  background-image: url(../../assets/images/background_hero-section.png);
-  background-repeat: no-repeat;
+  background-image: url(../assets/images/background_hero-section.png);
+  background-size: cover;
   background-position: top center;
+  background-repeat: no-repeat;
 }
 .hero-section__container {
   text-align: center;
@@ -141,14 +145,13 @@ body {
 .hero-section__title {
   width: 800px;
   margin: 0 auto;
-  font-family: "Poppins";
   font-weight: 700;
   font-size: 64px;
   line-height: 1.40625;
   color: #1c0e0d;
 }
 .hero-section__title--accent {
-  background-image: url(../../assets/images/Shape.png);
+  background-image: url(../assets/images/Shape.png);
   background-repeat: no-repeat;
   background-position: bottom left;
 }
@@ -169,21 +172,28 @@ body {
   border-radius: 40px;
 }
 .hero-section__statistics {
-  width: 77%;
   margin-top: 182px;
-  border-top-left-radius: 2000px;
+}
+.hero-section__statistics::after {
+  content: "";
+  position: absolute;
+  top: 920px;
+  right: 500px;
+  left: auto;
+  width: 300px;
+  height: 200px;
+  background-color: red;
 }
 .hero-section__statistics-wrapper-wrapper {
   display: flex;
+  justify-content: right;
   gap: 192px;
-  margin-left: 455px;
+  margin-right: 770px;
   padding-top: 98px;
   padding-bottom: 15px;
   background-color: #ffffff;
-  clip-path: polygon(0 0, calc(100% - 165px) 0, 100% 100%, 0% 100%);
 }
 .hero-section__statistics-title {
-  font-family: "Poppins";
   font-size: 48px;
   font-weight: 600;
   line-height: 1.3333333333;
@@ -193,4 +203,15 @@ body {
   font-size: 18px;
   color: #404040;
   opacity: 0.6;
+}
+
+.tracker-section {
+  background-color: #f3fdfe;
+}
+.tracker-section__title {
+  width: 700px;
+  font-weight: 600px;
+  font-family: "Poppins";
+  font-size: 48px;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

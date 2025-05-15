@@ -3,9 +3,10 @@
 .hero-section {
   padding-top: 220px;
   background-color: $color-ivory;
-  background-image: url(../../assets/images/background_hero-section.png);
-  background-repeat: no-repeat;
+  background-image: url(../assets/images/background_hero-section.png);
+  background-size: cover;
   background-position: top center;
+  background-repeat: no-repeat;
 
   &__container {
     text-align: center;
@@ -14,14 +15,13 @@
   &__title {
     width: 800px;
     margin: 0 auto;
-    font-family: "Poppins";
     font-weight: 700;
     font-size: $fs-64-28;
     line-height: calc(90px / 64px);
     color: $color-dark-maroon;
 
     &--accent {
-      background-image: url(../../assets/images/Shape.png);
+      background-image: url(../assets/images/Shape.png);
       background-repeat: no-repeat;
       background-position: bottom left;
     }
@@ -44,21 +44,29 @@
     }
   }
   &__statistics {
-    width: 77%;
     margin-top: 182px;
-    border-top-left-radius: 2000px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 920px;
+      right: 500px;
+      left: auto;
+      width: 300px;
+      height: 200px;
+      background-color: red;
+    }
   }
   &__statistics-wrapper-wrapper {
     display: flex;
+    justify-content: right;
     gap: 192px;
-    margin-left: 455px;
+    margin-right: 770px;
     padding-top: 98px;
     padding-bottom: 15px;
     background-color: $color-white;
-    clip-path: polygon(0 0, calc(100% - 165px) 0, 100% 100%, 0% 100%);
   }
+
   &__statistics-title {
-    font-family: "Poppins";
     font-size: $fs-48-64;
     font-weight: 600;
     line-height: calc(64px / 48px);
