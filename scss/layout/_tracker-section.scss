@@ -1,0 +1,13 @@
+@use '../utils/variables' as *;
+
+.tracker-section {
+  background-color: $color-ice-blue;
+
+  &__title {
+    width: 700px;
+    font-weight: 600px;
+    font-family: 'Poppins';
+    font-size: $fs-48-64;
+    align-items: center;
+  }
+}

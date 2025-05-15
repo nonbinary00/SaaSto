@@ -1,0 +1,212 @@
+@charset "UTF-8";
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%; /* Для коректної роботи rem */
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%; /* Відключення масштабування тексту в мобільних браузерах */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Або інший базовий шрифт */
+  background-color: #fff;
+  color: #000;
+}
+
+img,
+picture,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border: none;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
+[class*=__container] {
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #fff8f2;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1170px;
+  padding-top: 40px;
+}
+.header__logo {
+  min-width: 178px;
+  height: auto;
+}
+.header__nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 420px;
+}
+.header__nav-link {
+  font-family: "Poppins";
+  font-size: 18px;
+  color: #1c0e0d;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.header__nav-link:hover {
+  color: #ff553e;
+}
+.header__button-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.button-type-1 {
+  padding: 16px 32px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  color: #ff553e;
+  border-radius: 34px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button-type-1:hover {
+  color: #ffffff;
+  background-color: #ff553e;
+  border-radius: 34px;
+}
+.button-type-1:active {
+  transform: scale(0.9);
+}
+
+.button-type-2 {
+  padding: 16px 32px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #ff553e;
+  border-radius: 34px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button-type-2:hover {
+  color: #ff553e;
+  background-color: #fff8f2;
+}
+.button-type-2:active {
+  transform: scale(0.9);
+}
+
+.hero-section {
+  padding-top: 220px;
+  background-color: #fff8f2;
+  background-image: url(../../assets/images/background_hero-section.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+.hero-section__container {
+  text-align: center;
+}
+.hero-section__title {
+  width: 800px;
+  margin: 0 auto;
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1.40625;
+  color: #1c0e0d;
+}
+.hero-section__title--accent {
+  background-image: url(../../assets/images/Shape.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+.hero-section__text {
+  max-width: 596px;
+  margin: 24px auto 0;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.8;
+  color: #40201e;
+  opacity: 0.8;
+}
+.hero-section__button {
+  margin-top: 68px;
+}
+.hero-section__button--padding {
+  padding: 24px 40px;
+  border-radius: 40px;
+}
+.hero-section__statistics {
+  width: 77%;
+  margin-top: 182px;
+  border-top-left-radius: 2000px;
+}
+.hero-section__statistics-wrapper-wrapper {
+  display: flex;
+  gap: 192px;
+  margin-left: 455px;
+  padding-top: 98px;
+  padding-bottom: 15px;
+  background-color: #ffffff;
+  -webkit-clip-path: polygon(0 0, calc(100% - 165px) 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, calc(100% - 165px) 0, 100% 100%, 0% 100%);
+}
+.hero-section__statistics-title {
+  font-family: "Poppins";
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.3333333333;
+  color: #18063c;
+}
+.hero-section__statistics-text {
+  font-size: 18px;
+  color: #404040;
+  opacity: 0.6;
+}
+
+.tracker-section {
+  background-color: #f3fdfe;
+}
+.tracker-section__title {
+  width: 700px;
+  font-weight: 600px;
+  font-family: "Poppins";
+  font-size: 48px;
+  align-items: center;
+}/*# sourceMappingURL=styles.css.map */
