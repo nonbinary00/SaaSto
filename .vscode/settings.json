@@ -1,22 +1,11 @@
 {
-  "files.autoSave": "onFocusChange",
-  "diffEditor.wordWrap": "off",
-  "editor.wordWrap": "on",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": true,
-  "liveSassCompile.settings.autoprefix": [],
-  "liveSassCompile. settings. formats": [
+  "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "/css",
-      "savePathReplacementPairs": [{ "replace": "main", "with": "styles" }]
+      "savePath": "/css"
     }
   ],
-  "explorer.confirmDragAndDrop": false,
-  "liveSassCompile.settings.forceBaseDirectory": "",
-  "editor defaultFormatter": "esbenp.prettier-vscode",
-  "editor minimap.enabled": false
+
+  "liveSassCompile.settings.generateMap": true
 }
