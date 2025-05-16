@@ -44,26 +44,20 @@
     }
   }
   &__statistics {
-    margin-top: 182px;
-    &::after {
-      content: "";
-      position: absolute;
-      top: 920px;
-      right: 500px;
-      left: auto;
-      width: 300px;
-      height: 200px;
-      background-color: red;
-    }
+    position: relative;
+    bottom: -1px;
+    margin-top: 200px;
   }
   &__statistics-wrapper-wrapper {
     display: flex;
-    justify-content: right;
+    justify-content: center;
+    align-items: center;
     gap: 192px;
-    margin-right: 770px;
-    padding-top: 98px;
-    padding-bottom: 15px;
-    background-color: $color-white;
+    padding: 94px 280px 60px 0;
+    background-image: url(../../assets/images/background_hero-section_statistics.png);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
   }
 
   &__statistics-title {
