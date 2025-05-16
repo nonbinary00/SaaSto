@@ -1,0 +1,76 @@
+@use "../utils/variables" as *;
+.features-section {
+  padding-top: 205px;
+  background-image: url(../../assets/images/rocket_features-section.png),
+    url(../../assets/icon/icon_decor.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 36%, 4% 10%;
+
+  &__title {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: $fs-48-24;
+    font-weight: 600;
+
+    &--accent {
+      background-image: url(../../assets/images/Shape.png);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+    }
+  }
+  &__text {
+    max-width: 659px;
+    margin: 20px auto 0;
+    text-align: center;
+    font-size: $fs-18-16;
+    line-height: calc(36px / 18px);
+    opacity: 0.8;
+    color: $color-charcoal;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 64px;
+  }
+  &__card {
+    max-width: 369px;
+    padding: 28px;
+    border-radius: 48px;
+
+    &--blue {
+      background-color: #70d0dc;
+    }
+    &--purple {
+      background-color: #7562e0;
+    }
+    &--orange {
+      background-color: #fa865f;
+    }
+  }
+  &__card-img {
+    width: 88px;
+    height: 88px;
+    padding: 24px 23px;
+    border-radius: 24px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: inset 1px 1px 0px $color-white, inset -1px 1px 0px $color-white;
+
+    & img {
+      width: 48px;
+      height: 40px;
+    }
+  }
+  &__card-title {
+    margin-top: 24px;
+    font-size: $fs-26-20;
+    font-weight: 600;
+    color: $color-white;
+  }
+  &__card-text {
+    margin-top: 10px;
+    font-size: $fs-18-16;
+    color: $color-white;
+    opacity: 0.8;
+  }
+}
