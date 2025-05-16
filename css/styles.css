@@ -172,26 +172,20 @@ p {
   border-radius: 40px;
 }
 .hero-section__statistics {
-  margin-top: 182px;
-}
-.hero-section__statistics::after {
-  content: "";
-  position: absolute;
-  top: 920px;
-  right: 500px;
-  left: auto;
-  width: 300px;
-  height: 200px;
-  background-color: red;
+  position: relative;
+  bottom: -1px;
+  margin-top: 200px;
 }
 .hero-section__statistics-wrapper-wrapper {
   display: flex;
-  justify-content: right;
+  justify-content: center;
+  align-items: center;
   gap: 192px;
-  margin-right: 770px;
-  padding-top: 98px;
-  padding-bottom: 15px;
-  background-color: #ffffff;
+  padding: 94px 280px 60px 0;
+  background-image: url(../../assets/images/background_hero-section_statistics.png);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 .hero-section__statistics-title {
   font-size: 48px;
@@ -203,6 +197,77 @@ p {
   font-size: 18px;
   color: #404040;
   opacity: 0.6;
+}
+
+.features-section {
+  padding-top: 205px;
+  background-image: url(../../assets/images/rocket_features-section.png), url(../../assets/icon/icon_decor.svg);
+  background-repeat: no-repeat;
+  background-position: 80% 36%, 4% 10%;
+}
+.features-section__title {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 48px;
+  font-weight: 600;
+}
+.features-section__title--accent {
+  background-image: url(../../assets/images/Shape.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+.features-section__text {
+  max-width: 659px;
+  margin: 20px auto 0;
+  text-align: center;
+  font-size: 18px;
+  line-height: 2;
+  opacity: 0.8;
+  color: #404040;
+}
+.features-section__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  margin-top: 64px;
+}
+.features-section__card {
+  max-width: 369px;
+  padding: 28px;
+  border-radius: 48px;
+}
+.features-section__card--blue {
+  background-color: #70d0dc;
+}
+.features-section__card--purple {
+  background-color: #7562e0;
+}
+.features-section__card--orange {
+  background-color: #fa865f;
+}
+.features-section__card-img {
+  width: 88px;
+  height: 88px;
+  padding: 24px 23px;
+  border-radius: 24px;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: inset 1px 1px 0px #ffffff, inset -1px 1px 0px #ffffff;
+}
+.features-section__card-img img {
+  width: 48px;
+  height: 40px;
+}
+.features-section__card-title {
+  margin-top: 24px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.features-section__card-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #ffffff;
+  opacity: 0.8;
 }
 
 .tracker-section {
