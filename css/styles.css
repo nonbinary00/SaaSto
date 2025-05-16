@@ -274,9 +274,54 @@ p {
   background-color: #f3fdfe;
 }
 .tracker-section__title {
-  width: 700px;
-  font-weight: 600px;
+  font-weight: 600;
   font-family: "Poppins";
+  color: #18063c;
   font-size: 48px;
-  align-items: center;
+  white-space: nowrap;
+  padding-top: 140px;
+  padding-left: 376px;
+}
+.tracker-section__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 2;
+  margin-top: 20px;
+  padding-left: 376px;
+}
+
+.tracker-section-list {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+  padding-left: 376px;
+  padding-top: 64px;
+}
+
+.tracker-section-list__card {
+  display: flex;
+  align-items: flex-start; /* выравнивание по верхнему краю */
+  gap: 32px;
+}
+
+.tracker-section-list__card:nth-child(2) {
+  margin-left: 170px;
+}
+
+.tracker-section-list__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracker-section-list__title {
+  font-weight: 600;
+  padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.tracker-section-list__text {
+  font-weight: 400;
+  font-family: "Inter";
+  line-height: 2;
+  color: #404040;
 }/*# sourceMappingURL=styles.css.map */
