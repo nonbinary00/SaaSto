@@ -96,6 +96,9 @@ p {
 }
 
 .button-type-1 {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
   padding: 16px 32px;
   font-family: "Poppins";
   font-weight: 500;
@@ -106,26 +109,37 @@ p {
 }
 .button-type-1:hover {
   color: #ffffff;
-  background-color: #ff553e;
-  border-radius: 34px;
 }
 .button-type-1:active {
   transform: scale(0.9);
 }
+.button-type-1:hover::after {
+  transform: translateX(-130px);
+}
+.button-type-1::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: -135px;
+  z-index: -1;
+  width: 120px;
+  height: 60px;
+  background-color: #ff553e;
+  border-radius: 34px;
+  transition: transform 0.3s ease;
+}
 
 .button-type-2 {
+  cursor: pointer;
+  z-index: 1;
   padding: 16px 32px;
   font-family: "Poppins";
   font-weight: 500;
   font-size: 18px;
   color: #ffffff;
-  background-color: #ff553e;
   border-radius: 34px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-}
-.button-type-2:hover {
-  color: #ff553e;
-  background-color: #fff8f2;
 }
 .button-type-2:active {
   transform: scale(0.9);
