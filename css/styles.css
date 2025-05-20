@@ -272,6 +272,16 @@ p {
 
 .tracker-section {
   background-color: #f3fdfe;
+  min-height: 600px;
+  position: relative;
+}
+.tracker-section .tracker-section__wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 376px;
+  padding-top: 140px;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 .tracker-section__title {
   font-weight: 600;
@@ -279,23 +289,90 @@ p {
   color: #18063c;
   font-size: 48px;
   white-space: nowrap;
-  padding-top: 140px;
-  padding-left: 376px;
 }
 .tracker-section__text {
   font-weight: 400;
   font-size: 18px;
   line-height: 2;
   margin-top: 20px;
-  padding-left: 376px;
+}
+
+.tracker-section::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 383px;
+  height: 386px;
+  background-image: url(/assets/images/search.png);
+  background-repeat: no-repeat;
+  top: 350px;
+  z-index: 2;
+}
+
+.tracker-section::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 375px;
+  height: 352px;
+  background-image: url(/assets/images/goal.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: -33px;
+  right: 0;
+  z-index: 2;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 160px;
+  margin-top: 64px;
+  position: relative;
+}
+
+.dashboard::after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 89.07px;
+  height: 124.5px;
+  background-image: url(/assets/tracker-icon/sparrow-pink.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 270px; /* или нужное значение */
+  left: -80px;
+  z-index: 3;
+}
+
+.dashboard::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 89.07px;
+  height: 124.5px;
+  background-image: url(/assets/tracker-icon/sparrow-blue.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 20px; /* или нужное значение */
+  right: 490px;
+  z-index: 3;
+}
+
+.tracker-section__options,
+.statistics {
+  flex: 1 1 50%;
+  max-width: 48%;
 }
 
 .tracker-section-list {
   display: flex;
   flex-direction: column;
   gap: 64px;
-  padding-left: 376px;
-  padding-top: 64px;
 }
 
 .tracker-section-list__card {
@@ -305,7 +382,7 @@ p {
 }
 
 .tracker-section-list__card:nth-child(2) {
-  margin-left: 170px;
+  transform: translateX(110px);
 }
 
 .tracker-section-list__content {
@@ -324,4 +401,47 @@ p {
   font-family: "Inter";
   line-height: 2;
   color: #404040;
+}
+
+.statistics {
+  display: flex;
+  flex: 1 1 50%;
+  max-width: 50%;
+}
+
+.statistics__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* две колонки */
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "card1 card2" "card3 card2" ".     card2";
+  -moz-column-gap: 26px;
+       column-gap: 26px;
+  row-gap: 26px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.statistics__item:nth-child(1) {
+  grid-area: card1;
+}
+
+.statistics__item:nth-child(2) {
+  grid-area: card2;
+}
+
+.statistics__item:nth-child(3) {
+  grid-area: card3;
+}
+
+.statistics__item {
+  max-width: 682px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  box-shadow: 0px 32px 54px 0px rgba(65, 74, 85, 0.0509803922);
+}
+
+.statistics__item:hover {
+  transform: translateY(-5px);
 }/*# sourceMappingURL=styles.css.map */
