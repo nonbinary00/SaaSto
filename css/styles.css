@@ -464,4 +464,62 @@ p {
   font-family: "Inter";
   line-height: 2;
   color: #404040;
+}
+
+.footer {
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto; /* центрування */
+  padding-top: 130px;
+  padding-bottom: 60px;
+}
+.footer__container {
+  text-align: center;
+}
+.footer__links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.footer__nav ul {
+  display: flex;
+  gap: 48px;
+}
+.footer__nav-link {
+  font-size: 18px;
+  color: #1c0e0d;
+  transition: color 0.3s ease;
+}
+.footer__nav-link:hover {
+  color: #ff553e;
+}
+.footer__social-media {
+  display: flex;
+  flex-direction: row;
+  gap: 46px;
+}
+.footer__social-media a {
+  fill: #18063C;
+  transition: all 0.3s ease;
+}
+.footer__social-media a:hover {
+  fill: #5BC17F;
+  transform: scale(1.2);
+}
+.footer__hr {
+  border: 1px solid #404040;
+  opacity: 20%;
+}
+.footer__terms {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  color: #404040;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+}
+.footer__terms--center {
+  transform: translateX(-50%);
+  margin-left: -20%;
 }/*# sourceMappingURL=styles.css.map */
