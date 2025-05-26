@@ -1,0 +1,115 @@
+@use '../utils/variables' as *;
+
+.partners-section {
+  padding: 120px 20px;
+  background-color: #f8fefe;
+
+  &__container {
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 1400px;
+    gap: 100px;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__cards {
+    flex: 0 1 799px;
+    display: grid;
+    justify-items: flex-end;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(150px, auto);
+    column-gap: 20px;
+    row-gap: 30px;
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+
+    &.soft-pink {
+      grid-column: 1;
+      grid-row: 1;
+    }
+
+    &.soft-yellow {
+      grid-column: 1;
+      grid-row: 2;
+    }
+
+    &.soft-green {
+      grid-column: 2;
+      grid-row: 2;
+      margin-top: -260px;
+      margin-right: 50px;
+      z-index: 2;
+      padding: 30px;
+    }
+
+    &.soft-blue {
+      grid-column: 2;
+      grid-row: 3;
+      margin-top: -160px;
+      z-index: 1;
+      padding: 30px;
+    }
+
+    &.soft-lavender {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+
+  &__content {
+    flex: 0 0 525px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    font-size: 42px;
+    font-weight: 600;
+    color: #18063c;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    background-image: url(/assets/images/Shape.png);
+    background-repeat: no-repeat;
+    background-position: 131px 28px;
+  }
+
+  &__text {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 2;
+    color: $color-charcoal;
+    opacity: 80%;
+    padding-bottom: 48px;
+  }
+
+  &__button {
+    border: 1px solid #ff553e;
+    border-radius: 40px;
+    padding: 24px 40px;
+    font-style: Poppins;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #ff553e;
+    cursor: pointer;
+    width: 184px;
+    height: 76px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: #ff553e;
+      color: #ffff;
+    }
+  }
+}
