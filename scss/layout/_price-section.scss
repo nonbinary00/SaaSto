@@ -4,7 +4,7 @@
   &__container {
     background-color: #fff;
     padding-top: 140px;
-    background-image: url(/assets/images/price-bg.png);
+    background-image: url(../assets/images/price-bg.png);
     background-position: 82% 189px;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -54,7 +54,7 @@
     &::after {
       content: '';
       position: absolute;
-      background-image: url(/assets/images/Handd1.png);
+      background-image: url(../assets/images/Handd1.png);
       background-repeat: no-repeat;
       background-size: contain;
       width: 332px;
@@ -69,7 +69,7 @@
     &::before {
       content: '';
       position: absolute;
-      background-image: url(/assets/images/hourglass.png);
+      background-image: url(../assets/images/hourglass.png);
       background-repeat: no-repeat;
       background-size: contain;
       width: 223px;
