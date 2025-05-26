@@ -427,7 +427,7 @@ p {
   color: #18063c;
   font-size: 48px;
   white-space: nowrap;
-  background-image: url(/assets/images/Shape.png);
+  background-image: url(../assets/images/Shape.png);
   background-repeat: no-repeat;
   background-position: 212px 36px;
 }
@@ -444,7 +444,7 @@ p {
   display: block;
   width: 383px;
   height: 386px;
-  background-image: url(/assets/images/search.png);
+  background-image: url(../assets/images/search.png);
   background-repeat: no-repeat;
   top: 350px;
   z-index: 2;
@@ -455,7 +455,7 @@ p {
   display: block;
   width: 375px;
   height: 352px;
-  background-image: url(/assets/images/goal.png);
+  background-image: url(../assets/images/goal.png);
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -478,7 +478,7 @@ p {
   display: block;
   width: 89.07px;
   height: 124.5px;
-  background-image: url(/assets/tracker-icon/sparrow-pink.png);
+  background-image: url(../assets/tracker-icon/sparrow-pink.png);
   background-position: top left;
   background-repeat: no-repeat;
   background-size: contain;
@@ -492,7 +492,7 @@ p {
   display: block;
   width: 89.07px;
   height: 124.5px;
-  background-image: url(/assets/tracker-icon/sparrow-blue.png);
+  background-image: url(../assets/tracker-icon/sparrow-blue.png);
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
@@ -584,7 +584,7 @@ p {
 .price-section__container {
   background-color: #fff;
   padding-top: 140px;
-  background-image: url(/assets/images/price-bg.png);
+  background-image: url(../assets/images/price-bg.png);
   background-position: 82% 189px;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -627,7 +627,7 @@ p {
 .price-section__cards::after {
   content: "";
   position: absolute;
-  background-image: url(/assets/images/Handd1.png);
+  background-image: url(../assets/images/Handd1.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 332px;
@@ -641,7 +641,7 @@ p {
 .price-section__cards::before {
   content: "";
   position: absolute;
-  background-image: url(/assets/images/hourglass.png);
+  background-image: url(../assets/images/hourglass.png);
   background-repeat: no-repeat;
   background-size: contain;
   width: 223px;
@@ -855,7 +855,7 @@ p {
   color: #18063c;
   line-height: 1.4;
   margin-bottom: 24px;
-  background-image: url(/assets/images/Shape.png);
+  background-image: url(../assets/images/Shape.png);
   background-repeat: no-repeat;
   background-position: 131px 28px;
 }
