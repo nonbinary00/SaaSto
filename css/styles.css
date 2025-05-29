@@ -53,6 +53,7 @@ body {
   max-width: 1920px;
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 p {
@@ -978,6 +979,8 @@ p {
   position: relative;
 }
 .get-it-section__container {
+  overflow: hidden;
+  overflow-x: hidden;
   display: flex;
   gap: 111px;
   justify-content: space-between;
@@ -1024,6 +1027,7 @@ p {
   z-index: 1;
 }
 .get-it-section__hand--right {
+  overflow: hidden;
   position: absolute;
   width: 632px;
   height: 218px;
