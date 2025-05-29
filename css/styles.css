@@ -537,6 +537,7 @@ p {
   font-family: "Inter";
   line-height: 2;
   color: #404040;
+  opacity: 0.8;
 }
 
 .statistics {
@@ -885,7 +886,6 @@ p {
   color: white;
 }
 
-
 .client-section__container {
   position: relative;
   text-align: center;
@@ -970,7 +970,7 @@ p {
   top: 537px;
   right: -278px;
   z-index: -2;
-
+}
 
 .get-it-section {
   background-color: #FFF8F2;
@@ -1030,9 +1030,7 @@ p {
   top: 50%;
   right: -250px;
   z-index: 1;
-  opacity: 0.8;
 }
-
 
 .footer {
   width: 90vw;
@@ -1090,5 +1088,4 @@ p {
 .footer__terms--center {
   transform: translateX(-50%);
   margin-left: -20%;
-
 }/*# sourceMappingURL=styles.css.map */
