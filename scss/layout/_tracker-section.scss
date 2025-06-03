@@ -1,11 +1,11 @@
-@use '../utils/variables' as *;
+@use "../utils/variables" as *;
 
 .tracker-section {
   background-color: $color-ice-blue;
 
   &__title {
     font-weight: 600;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     color: $color-midnight-purple;
     font-size: $fs-48-64;
     white-space: nowrap;
@@ -52,7 +52,7 @@
 
 .tracker-section-list__text {
   font-weight: 400;
-  font-family: 'Inter';
+  font-family: "Inter";
   line-height: 2;
   color: $color-charcoal;
 }
