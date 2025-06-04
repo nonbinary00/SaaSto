@@ -14,10 +14,12 @@ html {
 }
 
 body {
-  margin: 0;
-  font-family: Arial, sans-serif; /* Або інший базовий шрифт */
-  background-color: #fff;
+  max-width: 1920px;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
   color: #000;
+  background-color: #fff;
 }
 
 img,

@@ -1,0 +1,99 @@
+@use "../utils/variables" as *;
+
+.client-section {
+  &__container {
+    position: relative;
+    text-align: center;
+    max-width: 1000px;
+    margin-bottom: 140px;
+  }
+
+  &__title {
+    font-size: $fs-48-24;
+    margin-top: 173px;
+  }
+  &__subtitle {
+    font-size: $fs-18;
+    margin-top: 20px;
+  }
+
+  .comment {
+    margin-top: 60px;
+    // background-color: aquamarine;
+    display: flex;
+    gap: 48px;
+    text-align: left;
+
+    &__img {
+      width: 298px;
+      height: 379px;
+    }
+
+    &__text {
+      font-size: $fs-20-16;
+      margin-top: 65px;
+    }
+
+    &__author {
+      font-size: $fs-24-20;
+      margin-top: 36px;
+    }
+
+    &__role {
+      font-size: $fs-18-16;
+      margin-top: 16px;
+    }
+
+    .dots {
+      margin-top: 28px;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: $color-coral;
+      opacity: 20%;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+
+  &__like-shape {
+    width: 220px;
+    height: 225px;
+    position: absolute;
+    top: -102px;
+    left: -391px;
+    z-index: -1;
+  }
+  &__chat-shape {
+    width: 196px;
+    height: 200px;
+    position: absolute;
+    bottom: -24px;
+    left: -185px;
+    z-index: -1;
+  }
+  &__emoji-shape {
+    width: 126px;
+    height: 123px;
+    position: absolute;
+    top: 475px;
+    right: -210px;
+    z-index: -1;
+  }
+  &__arrow-vector {
+    position: absolute;
+    top: 30px;
+    left: -250px;
+    z-index: -2;
+  }
+  &__diamond-vector {
+    position: absolute;
+    top: 537px;
+    right: -278px;
+    z-index: -2;
+  }
+}
