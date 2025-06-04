@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use "../utils/variables" as *;
 
 .tracker-section {
   background-color: $color-ice-blue;
@@ -14,7 +14,7 @@
 
   &__title {
     font-weight: 600;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     color: $color-midnight-purple;
     font-size: $fs-48-64;
     white-space: nowrap;
@@ -33,7 +33,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     width: 383px;
     height: 386px;
@@ -45,7 +45,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     width: 375px;
     height: 352px;
@@ -69,7 +69,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     width: 89.07px;
     height: 124.5px;
@@ -84,7 +84,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     width: 89.07px;
     height: 124.5px;
@@ -136,7 +136,7 @@
 
   &__text {
     font-weight: 400;
-    font-family: 'Inter';
+    font-family: "Inter";
     line-height: 2;
     color: $color-charcoal;
     opacity: 0.8;
@@ -152,9 +152,9 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-      'card1 card2'
-      'card3 card2'
-      '.     card2';
+      "card1 card2"
+      "card3 card2"
+      ".     card2";
     column-gap: 26px;
     row-gap: 26px;
     list-style: none;
@@ -172,6 +172,13 @@
     &:hover {
       transform: translateY(-5px);
     }
+  }
+
+  .tracker-section-list__text {
+    font-weight: 400;
+    font-family: "Inter";
+    line-height: 2;
+    color: $color-charcoal;
 
     &--first {
       grid-area: card1;
