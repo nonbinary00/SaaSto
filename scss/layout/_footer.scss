@@ -1,86 +1,66 @@
 @use "../utils/variables" as *;
 
-
-
 .footer {
-    width: 90vw;
-    max-width: 1200px;
-    // height: 340px;
-    margin: 0 auto; /* центрування */
+  width: 90vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 130px;
+  padding-bottom: 60px;
 
-    padding-top: 130px;
-    padding-bottom: 60px;
+  &__container {
+    text-align: center;
+  }
 
-    &__container {
-        text-align: center;
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    padding-bottom: 61px;
+    border-bottom: 1px solid rgba(64, 64, 64, 0.2);
+  }
+
+  &__nav ul {
+    display: flex;
+    gap: 48px;
+  }
+
+  &__nav-link {
+    font-size: $fs-18;
+    color: $color-dark-maroon;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $color-coral;
+    }
+  }
+
+  &__social-media {
+    display: flex;
+    flex-direction: row;
+    gap: 46px;
+
+    a {
+      fill: $color-social;
+      transition: all 0.3s ease;
     }
 
-
-    &__links {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 60px;
+    a:hover {
+      fill: $color-social-hover;
+      transform: scale(1.2);
     }
-    
-    &__nav ul {
-            display: flex;
-            gap: 48px;
-        }
+  }
 
-    &__nav-link {
-        font-size: $fs-18;
-        color: $color-dark-maroon;
-        transition: color 0.3s ease;
+  &__terms {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    color: $color-charcoal;
+    font-size: $fs-18-16;
 
-        &:hover {
-        color: $color-coral;
-        }
-            
+    &--center {
+      transform: translateX(-50%);
+      margin-left: -20%;
     }
-
-    &__social-media {
-        display: flex;
-        flex-direction: row;
-        gap: 46px;
-
-        
-
-        a {
-            fill: $color-social;
-            transition: all 0.3s ease;
-        }
-
-        a:hover {
-            fill: $color-social-hover;
-            transform: scale(1.2);
-
-        }
-        
-    }
-
-
-    &__hr {
-        border: 1px solid $color-charcoal;
-        opacity: 20%;
-        
-    }
-
-    
-
-
-    &__terms {
-        margin-top: 40px;
-        display: flex;
-        justify-content: space-between;
-        color: $color-charcoal;
-        font-family: "Inter", sans-serif;
-        font-size: $fs-18-16;
-
-        &--center {
-            transform: translateX(-50%);
-            margin-left: -20%;
-        }
-
-    }
+  }
 }

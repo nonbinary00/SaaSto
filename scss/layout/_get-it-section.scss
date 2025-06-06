@@ -1,86 +1,61 @@
 @use "../utils/variables" as *;
 
 .get-it-section {
-    background-color: #FFF8F2;
-    box-sizing: border-box;
-    position: relative;
+  background-color: $color-ivory;
+  background-image: url(../assets/images/left_hand.png),
+    url(../assets/images/right_hand.png);
+  background-repeat: no-repeat;
+  background-position: top left, right 300px;
+  background-size: auto, 350px auto;
 
-    &__container {
-        overflow: hidden;
-        overflow-x: hidden;
-        display: flex;
-        gap: 111px;
-        justify-content: space-between;
-        align-items: center;
-        max-width: 1045px;
-    
+  &__container {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+  }
+
+  &__title {
+    margin-top: 248px;
+    padding: 7px 0;
+    font-weight: 600;
+    font-size: $fs-48-24;
+    line-height: 70px;
+    color: $color-midnight-purple;
+
+    &--accent {
+      background-image: url(../assets/images/Shape.png);
+      background-repeat: no-repeat;
+      background-position: center bottom;
+      background-size: 100%;
     }
+  }
 
-    &__info, &__phone {
-        z-index: 2;
+  &__text {
+    max-width: 530px;
+    margin-top: 24px;
+    font-size: $fs-20-16;
+    line-height: 36px;
+    color: $color-charcoal;
+  }
+
+  &__button {
+    margin-right: 20px;
+    & svg {
+      margin-top: 48px;
+      width: 195px;
+      height: 75px;
+      border-radius: 40px;
+      fill: $color-coral;
+
+      &:hover {
+        fill: $color-white;
+      }
     }
+  }
 
-
-    &__title {
-        font-size: $fs-48-24;
-        margin-bottom: 24px;
-    }
-
-    &__text {
-        font-size: $fs-20-16;
-        max-width: 530px;
-        margin-bottom: 48px;
-    }
-
-
-    &__button {
-        border: 1px solid $color-coral;
-        border-radius: 40px;
-        padding: 24px 40px;
-        margin-right: 20px;
-        // margin-bottom: 140px;
-        fill: $color-coral;
-        transition: all 0.3s ease-in-out;
-
-        &:hover {
-            background-color: $color-coral;
-            fill: $color-white;
-        }
-    }
-
-    &__phone {
-        width: 405px;
-        height: 576px;
-        margin-top: 100px;
-        position: relative;
-    } 
-    
-
-    &__hand {
-        &--left {
-            width: 396px;
-            height: 156px;
-            position: absolute;
-            top: 20%;
-            transform: translateY(-50%) rotate(28deg);
-            left: -50px;
-            z-index: 1;
-        }
-
-        &--right {
-            overflow: hidden;
-            position: absolute;
-            width: 632px;
-            height: 218px;
-            top: 50%;
-            right: -250px;
-            // transform: translateX(1300px);
-            z-index: 1;
-
-
-        }
-    }
-
-  
-
+  &__phone {
+    width: 405px;
+    height: auto;
+    margin-top: 100px;
+  }
 }
