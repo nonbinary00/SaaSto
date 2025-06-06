@@ -186,7 +186,7 @@ p {
   align-items: center;
   gap: 192px;
   padding: 94px 280px 60px 0;
-  background-image: url(../../assets/images/background_hero-section_statistics.png);
+  background-image: url(../assets/images/background_hero-section_statistics.png);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -982,7 +982,7 @@ p {
 
 .get-it-section {
   background-color: #fff8f2;
-  background-image: url(../../assets/images/left_hand.png), url(../../assets/images/right_hand.png);
+  background-image: url(../assets/images/left_hand.png), url(../assets/images/right_hand.png);
   background-repeat: no-repeat;
   background-position: top left, right 300px;
   background-size: auto, 350px auto;
