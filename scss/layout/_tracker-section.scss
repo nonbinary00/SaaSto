@@ -1,4 +1,4 @@
-@use "../utils/variables" as *;
+@use '../utils/variables' as *;
 
 .tracker-section {
   background-color: $color-ice-blue;
@@ -15,10 +15,7 @@
 
   &__title {
     font-weight: 600;
-
-
-    font-family: "Poppins";
-
+    font-family: 'Poppins';
     color: $color-midnight-purple;
     font-size: $fs-48-64;
     white-space: nowrap;
@@ -37,7 +34,7 @@
 
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     display: block;
     width: 383px;
     height: 386px;
@@ -49,7 +46,7 @@
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     display: block;
     width: 375px;
     height: 352px;
@@ -73,7 +70,7 @@
 
   &::after {
     position: absolute;
-    content: "";
+    content: '';
     display: block;
     width: 89.07px;
     height: 124.5px;
@@ -88,7 +85,7 @@
 
   &::before {
     position: absolute;
-    content: "";
+    content: '';
     display: block;
     width: 89.07px;
     height: 124.5px;
@@ -144,7 +141,7 @@
 
     font-size: $fs-18-16;
 
-    font-family: "Inter";
+    font-family: 'Inter';
 
     line-height: 2;
     color: $color-charcoal;
@@ -156,16 +153,15 @@
   flex: 1 1 50%;
   max-width: 50%;
   margin-top: -72px;
-  padding-bottom: 138px;
 
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-columns: 35% 45%;
     grid-template-areas:
-      "card1 card2"
-      "card3 card2"
-      ".     card2";
+      'card1 card2'
+      'card3 card2'
+      '.     card2';
     column-gap: 26px;
     row-gap: 26px;
     list-style: none;
@@ -183,13 +179,6 @@
     &:hover {
       transform: translateY(-5px);
     }
-  }
-
-  .tracker-section-list__text {
-    font-weight: 400;
-    font-family: "Inter";
-    line-height: 2;
-    color: $color-charcoal;
 
     &--first {
       grid-area: card1;
@@ -212,9 +201,17 @@
   }
 
   &__cards {
-    max-width: 100%; // ограничит ширину, но сохранит пропорции
+    max-width: 100%;
     height: auto;
     object-fit: cover;
     display: block;
   }
+}
+
+.tracker-section-list__text {
+  font-weight: 400;
+  font-family: 'Inter';
+  line-height: 2;
+  color: $color-charcoal;
+  opacity: 0.8;
 }
