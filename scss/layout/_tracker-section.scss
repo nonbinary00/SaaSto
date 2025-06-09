@@ -4,9 +4,10 @@
   background-color: $color-ice-blue;
   min-height: 600px;
   position: relative;
+  margin-top: 140px;
 
   &__wrapper {
-    max-width: 1440px;
+    // max-width: 1440px;
     margin: 0 auto;
     padding: 140px 20px 0 376px;
     box-sizing: border-box;
@@ -14,7 +15,10 @@
 
   &__title {
     font-weight: 600;
+
+
     font-family: "Poppins";
+
     color: $color-midnight-purple;
     font-size: $fs-48-64;
     white-space: nowrap;
@@ -63,7 +67,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 160px;
+  gap: 28px;
   margin-top: 64px;
   position: relative;
 
@@ -92,8 +96,8 @@
     background-position: top right;
     background-repeat: no-repeat;
     background-size: contain;
-    top: 20px;
-    right: 490px;
+    top: 35px;
+    right: 930px;
     z-index: 3;
   }
 }
@@ -111,10 +115,10 @@
   &__card {
     display: flex;
     align-items: flex-start;
-    gap: 32px;
+    gap: 48px;
 
     &--offset {
-      transform: translateX(110px);
+      transform: translateX(160px);
     }
   }
 
@@ -131,12 +135,17 @@
   &__title {
     font-weight: 600;
     padding-bottom: 10px;
-    font-size: $fs-18;
+    font-size: $fs-28-18;
+    color: $color-charcoal;
   }
 
   &__text {
     font-weight: 400;
+
+    font-size: $fs-18-16;
+
     font-family: "Inter";
+
     line-height: 2;
     color: $color-charcoal;
     opacity: 0.8;
@@ -146,11 +155,13 @@
 .statistics {
   flex: 1 1 50%;
   max-width: 50%;
+  margin-top: -72px;
+  padding-bottom: 138px;
 
   &__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 35% 45%;
     grid-template-areas:
       "card1 card2"
       "card3 card2"
@@ -182,20 +193,28 @@
 
     &--first {
       grid-area: card1;
+      width: 267.62px;
+      height: 270.96px;
     }
 
     &--second {
       grid-area: card2;
+      width: 388.05px;
+      height: 444.91px;
     }
 
     &--third {
       grid-area: card3;
+      width: 230.82px;
+      height: 321.14px;
+      margin-left: 35px;
     }
   }
 
-  &__card {
-    width: 100%;
+  &__cards {
+    max-width: 100%; // ограничит ширину, но сохранит пропорции
     height: auto;
+    object-fit: cover;
     display: block;
   }
 }

@@ -58,6 +58,7 @@
       margin-top: -160px;
       z-index: 1;
       padding: 30px;
+      margin-bottom: 80px;
     }
 
     &.soft-lavender {
@@ -71,6 +72,7 @@
     max-width: 500px;
     display: flex;
     flex-direction: column;
+    padding-top: 128px;
   }
 
   &__item {
@@ -85,7 +87,6 @@
   }
 
   &__text {
-    font-family: Inter;
     font-weight: 400;
     font-size: 18px;
     line-height: 2;

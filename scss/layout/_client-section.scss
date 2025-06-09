@@ -1,4 +1,4 @@
-@use "../utils/variables" as *;
+@use '../utils/variables' as *;
 
 .client-section {
   &__container {
@@ -9,11 +9,26 @@
   }
 
   &__title {
+
+    font-weight: 600;
     font-size: $fs-48-24;
+    line-height: 1.5;
     margin-top: 173px;
+    color: $color-midnight-purple;
+
+    &--accent {
+      background-image: url(../assets/images/Shape.png);
+      background-repeat: no-repeat;
+      background-position: bottom left;
+    }
   }
   &__subtitle {
+    font-weight: 400;
     font-size: $fs-18;
+    line-height: 2;
+    color: $color-charcoal;
+    opacity: 80%;
+
     margin-top: 20px;
   }
 
@@ -31,16 +46,30 @@
 
     &__text {
       font-size: $fs-20-16;
+
+      font-weight: 400;
+      line-height: 1.8;
+      color: $color-charcoal;
+      opacity: 80%;
+
       margin-top: 65px;
     }
 
     &__author {
       font-size: $fs-24-20;
+
+      font-weight: 500;
+      color: #38363c;
+
       margin-top: 36px;
     }
 
     &__role {
       font-size: $fs-18-16;
+
+      color: #38363c;
+      opacity: 80%;
+
       margin-top: 16px;
     }
 

@@ -4,10 +4,10 @@
   &__container {
     background-color: #fff;
     padding-top: 140px;
-    background-image: url(../assets/images/price-bg.png);
-    background-position: 82% 189px;
-    background-color: transparent;
-    background-repeat: no-repeat;
+    // background-image: url(../assets/images/price-bg.png);
+    // background-position: 82% 189px;
+    // background-color: transparent;
+    // background-repeat: no-repeat;
     margin-bottom: 160px;
   }
 
@@ -15,6 +15,15 @@
     text-align: center;
     font-weight: 600;
     font-size: $fs-64-28;
+    color: $color-midnight-purple;
+    // background-image: (url(../assets/images/Shape.png));
+    // background-repeat: no-repeat;
+    // background-position: 1182px 50px;
+    &--accent {
+      background-image: url(../assets/images/Shape.png);
+      background-repeat: no-repeat;
+      background-position: right 24px bottom 9px;
+    }
   }
 
   &__text {
@@ -85,19 +94,33 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ff553e;
+    border: 1px solid $color-coral;
     border-radius: 80px;
     width: 470px;
-    height: 100%;
+    height: auto;
     z-index: 3;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: url(../assets/images/price-line.png);
+      background-repeat: no-repeat;
+      width: 136px;
+      height: 217px;
+      top: 20px;
+      right: calc(0% - 180px);
+      background-size: contain;
+      z-index: -9;
+    }
 
     &--free {
       background-color: white;
 
       .price-section__button {
-        background-color: #ff553e;
+        background-color: $color-coral;
         color: white;
-        border: 1px solid #ff553e;
+        border: 1px solid $color-coral;
 
         &:hover {
           background-color: #e04b38;
@@ -106,18 +129,19 @@
     }
 
     &--premium {
-      background-color: #ff553e;
+      background-color: $color-coral;
 
       .price-section__card--title,
       .price-section__features,
       .price-section__price,
       .price-section__features li {
         color: white;
+        opacity: initial;
       }
 
       .price-section__button {
         background-color: white;
-        color: #ff553e;
+        color: $color-coral;
         border: 1px solid white;
 
         &:hover {
@@ -127,8 +151,8 @@
     }
 
     &--title {
-      font-size: 48px;
-      padding: 64px 0;
+      font-size: $fs-48-24;
+      padding-top: 64px;
       font-family: Inter;
       font-weight: 600;
       text-align: center;
@@ -137,13 +161,15 @@
   }
 
   &__features {
-    font-size: 38px;
+    font-size: $fs-28-18;
     line-height: 1.8;
-    color: #ff553e;
+    color: $color-coral;
+    opacity: 80%;
     text-align: center;
     padding-bottom: 64px;
     font-family: Inter;
     font-weight: 600;
+    padding-top: 56px;
   }
 
   &__price {
@@ -156,18 +182,18 @@
 
   &__button {
     margin-bottom: 48px;
-    padding: 15px 30px;
-    border-radius: 30px;
+    padding: 24px 40px;
+    border-radius: 35px;
     font-family: Inter;
     font-weight: 600;
-    font-size: 18px;
+    font-size: $fs-18-16;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
   &__currency {
-    font-size: 18px;
+    font-size: $fs-18-16;
     opacity: 70%;
     line-height: 1.5;
     padding-right: 6px;
@@ -177,12 +203,12 @@
 
   &__amount {
     font-weight: 700;
-    font-size: 64px;
+    font-size: $fs-64-28;
     padding-right: 8px;
   }
 
   &__period {
-    font-size: 18px;
+    font-size: $fs-18-16;
     opacity: 40%;
   }
 }
@@ -218,7 +244,7 @@
     transition: 0.4s;
 
     &:before {
-      background-color: #ff553e;
+      background-color: $color-coral;
       bottom: 4px;
       content: '';
       height: 26px;
