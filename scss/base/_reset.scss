@@ -11,6 +11,7 @@ html {
   font-size: 100%; /* Для коректної роботи rem */
   line-height: 1.5;
   -webkit-text-size-adjust: 100%; /* Відключення масштабування тексту в мобільних браузерах */
+  scroll-behavior: smooth;
 }
 
 body {
