@@ -36,7 +36,10 @@
     opacity: 0.8;
   }
   &__button {
-    margin-top: 68px;
+    cursor: pointer;
+    display: block;
+    width: 260px;
+    margin: 102px auto 0;
 
     &--padding {
       padding: 24px 40px;

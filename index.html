@@ -25,15 +25,20 @@
         </div>
         <nav class="header__nav">
           <ul>
-            <li><a class="header__nav-link" href="#">Demos</a></li>
-            <li><a class="header__nav-link" href="#">Features</a></li>
-            <li><a class="header__nav-link" href="#">Pricing</a></li>
-            <li><a class="header__nav-link" href="#">Contact</a></li>
+            <li><a class="header__nav-link" href="#features">Features</a></li>
+            <li><a class="header__nav-link" href="#reporting">Reporting</a></li>
+            <li><a class="header__nav-link" href="#tracker">Tracker</a></li>
+            <li><a class="header__nav-link" href="#price">Pricing</a></li>
+            <li><a class="header__nav-link" href="#reviews">Reviews</a></li>
           </ul>
         </nav>
         <div class="header__button-wrapper">
-          <button class="header__button button-type-1">Login</button>
-          <button class="header__button button-type-2">Sign up</button>
+          <button class="header__button button-type-1 button-login">
+            Login
+          </button>
+          <button class="header__button button-type-1 button-sign-up">
+            Sign up
+          </button>
         </div>
       </div>
     </header>
@@ -49,11 +54,12 @@
             An enim nullam tempor sapien gravida donec enim ipsum porta justo
             congue magna at pretium purus pretium ligula
           </p>
-          <button
+          <a
             class="hero-section__button hero-section__button--padding button-type-2"
+            href="#price"
           >
             Start 14 Days Trial
-          </button>
+          </a>
           <article class="hero-section__statistics">
             <div class="hero-section__statistics-wrapper-wrapper">
               <div class="hero-section__statistics-wrapper">
@@ -72,7 +78,7 @@
           </article>
         </div>
       </section>
-      <section class="features-section">
+      <section class="features-section" id="features">
         <div class="features-section__container">
           <h2 class="features-section__title">
             Some excellent
@@ -116,7 +122,7 @@
           </div>
         </div>
       </section>
-      <section class="reporting-section">
+      <section class="reporting-section" id="reporting">
         <div class="reporting-section__container">
           <div class="reporting-section__wrapper-content">
             <h2 class="reporting-section__title">
@@ -359,11 +365,8 @@
           </div>
         </div>
       </section>
-      <section></section>
-      <section></section>
-      <section class="client-section" id="client">
+      <section class="client-section" id="reviews">
         <div class="client-section__container">
-
           <h2 class="client-section__title">
             What our
             <span class="client-section__title--accent">client says</span>
@@ -434,7 +437,6 @@
       </section>
       <section class="get-it-section">
         <div class="get-it-section__container">
-
           <div class="get-it-section__wrapper">
             <h2 class="get-it-section__title">
               Get it now
@@ -448,7 +450,6 @@
 
             <a href="" target="_blank" class="get-it-section__button">
               <svg class="button-type-1">
-
                 <use href="./assets/svg/get-it.svg#icon-AppStore"></use>
               </svg>
             </a>
@@ -459,10 +460,8 @@
             </a>
           </div>
           <div class="get-it-section__phone">
-
             <img src="./assets/images/Mobile.png" alt="Mobile" />
           </div>
-
         </div>
       </section>
     </main>
@@ -474,13 +473,15 @@
           </div>
           <nav class="footer__nav">
             <ul>
-              <li><a class="footer__nav-link" href="#">Demos</a></li>
-              <li><a class="footer__nav-link" href="#">Features</a></li>
-              <li><a class="footer__nav-link" href="#">Pricing</a></li>
-              <li><a class="footer__nav-link" href="#">Contact</a></li>
+              <li><a class="footer__nav-link" href="#features">Features</a></li>
+              <li>
+                <a class="footer__nav-link" href="#reporting">Reporting</a>
+              </li>
+              <li><a class="footer__nav-link" href="#tracker">Tracker</a></li>
+              <li><a class="footer__nav-link" href="#price">Pricing</a></li>
+              <li><a class="footer__nav-link" href="#reviews">Reviews</a></li>
             </ul>
           </nav>
-
 
           <div class="footer__social-media">
             <a href="#">
@@ -505,7 +506,6 @@
             </a>
           </div>
         </div>
-
 
         <div class="footer__terms">
           <a href="#">Terms & condition</a>
@@ -674,5 +674,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/open_modal.js"></script>
   </body>
 </html>

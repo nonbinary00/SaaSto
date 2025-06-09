@@ -12,6 +12,7 @@ html {
   font-size: 100%; /* Для коректної роботи rem */
   line-height: 1.5;
   -webkit-text-size-adjust: 100%; /* Відключення масштабування тексту в мобільних браузерах */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -59,6 +60,10 @@ body {
   overflow-x: hidden;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 p {
   font-family: "Inter", sans-serif;
 }
@@ -84,7 +89,7 @@ p {
 .header__nav ul {
   display: flex;
   justify-content: space-between;
-  width: 420px;
+  width: 520px;
 }
 .header__nav-link {
   font-size: 18px;
@@ -170,7 +175,10 @@ p {
   opacity: 0.8;
 }
 .hero-section__button {
-  margin-top: 68px;
+  cursor: pointer;
+  display: block;
+  width: 260px;
+  margin: 102px auto 0;
 }
 .hero-section__button--padding {
   padding: 24px 40px;
@@ -557,8 +565,7 @@ p {
   grid-template-columns: 1fr 1fr;
   grid-template-columns: 35% 45%;
   grid-template-areas: "card1 card2" "card3 card2" ".     card2";
-  -moz-column-gap: 26px;
-       column-gap: 26px;
+  column-gap: 26px;
   row-gap: 26px;
   list-style: none;
   margin: 0;
@@ -593,8 +600,7 @@ p {
 .statistics__cards {
   max-width: 100%;
   height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 
@@ -845,8 +851,7 @@ p {
   justify-items: flex-end;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: minmax(150px, auto);
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  column-gap: 20px;
   row-gap: 30px;
   position: relative;
   list-style: none;
@@ -1068,6 +1073,7 @@ p {
   font-size: 20px;
   line-height: 36px;
   color: #404040;
+  opacity: 0.7;
 }
 .get-it-section__button {
   margin-right: 20px;
@@ -1121,6 +1127,7 @@ p {
 .footer__social-media {
   display: flex;
   flex-direction: row;
+  margin-top: 7px;
   gap: 46px;
 }
 .footer__social-media a {
@@ -1144,20 +1151,34 @@ p {
 }
 
 .modal {
-  position: relative;
-  left: calc(50% - 250px);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+}
+.modal.active {
+  display: flex;
 }
 .modal__login-wrapper, .modal__sign-up-wrapper {
-  position: absolute;
+  display: none;
+  position: relative;
   bottom: auto;
   height: 840px;
-  margin-top: 40px;
+  margin: auto;
   display: flex;
   align-items: center;
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
   background-color: #fff8f2;
   text-align: center;
+  z-index: 1000;
+}
+.modal__login-wrapper.active, .modal__sign-up-wrapper.active {
+  display: block;
 }
 .modal__login-form, .modal__sign-up-form {
   width: 400px;
@@ -1170,6 +1191,7 @@ p {
   justify-content: space-between;
   align-items: center;
   height: 30px;
+  margin-top: 40px;
 }
 .modal__login-title, .modal__sign-up-title {
   text-transform: uppercase;
