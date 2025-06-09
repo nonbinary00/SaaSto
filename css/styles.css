@@ -415,16 +415,15 @@ p {
   background-color: #f3fdfe;
   min-height: 600px;
   position: relative;
+  margin-top: 140px;
 }
 .tracker-section__wrapper {
-  max-width: 1440px;
   margin: 0 auto;
   padding: 140px 20px 0 376px;
   box-sizing: border-box;
 }
 .tracker-section__title {
   font-weight: 600;
-  font-family: "Poppins";
   color: #18063c;
   font-size: 48px;
   white-space: nowrap;
@@ -469,7 +468,7 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 160px;
+  gap: 28px;
   margin-top: 64px;
   position: relative;
 }
@@ -497,8 +496,8 @@ p {
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
-  top: 20px;
-  right: 490px;
+  top: 35px;
+  right: 930px;
   z-index: 3;
 }
 
@@ -515,10 +514,10 @@ p {
 .tracker-section-list__card {
   display: flex;
   align-items: flex-start;
-  gap: 32px;
+  gap: 48px;
 }
 .tracker-section-list__card--offset {
-  transform: translateX(110px);
+  transform: translateX(160px);
 }
 .tracker-section-list__icon {
   width: 116px;
@@ -531,11 +530,12 @@ p {
 .tracker-section-list__title {
   font-weight: 600;
   padding-bottom: 10px;
-  font-size: 18px;
+  font-size: 28px;
+  color: #404040;
 }
 .tracker-section-list__text {
   font-weight: 400;
-  font-family: "Inter";
+  font-size: 18px;
   line-height: 2;
   color: #404040;
   opacity: 0.8;
@@ -544,11 +544,13 @@ p {
 .statistics {
   flex: 1 1 50%;
   max-width: 50%;
+  margin-top: -72px;
+  padding-bottom: 138px;
 }
 .statistics__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto auto;
+  grid-template-columns: 35% 45%;
   grid-template-areas: "card1 card2" "card3 card2" ".     card2";
   -moz-column-gap: 26px;
        column-gap: 26px;
@@ -569,32 +571,43 @@ p {
 }
 .statistics__item--first {
   grid-area: card1;
+  width: 267.62px;
+  height: 270.96px;
 }
 .statistics__item--second {
   grid-area: card2;
+  width: 388.05px;
+  height: 444.91px;
 }
 .statistics__item--third {
   grid-area: card3;
+  width: 230.82px;
+  height: 321.14px;
+  margin-left: 35px;
 }
-.statistics__card {
-  width: 100%;
+.statistics__cards {
+  max-width: 100%;
   height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
   display: block;
 }
 
 .price-section__container {
   background-color: #fff;
   padding-top: 140px;
-  background-image: url(../assets/images/price-bg.png);
-  background-position: 82% 189px;
-  background-color: transparent;
-  background-repeat: no-repeat;
   margin-bottom: 160px;
 }
 .price-section__title {
   text-align: center;
   font-weight: 600;
   font-size: 64px;
+  color: #18063c;
+}
+.price-section__title--accent {
+  background-image: url(../assets/images/Shape.png);
+  background-repeat: no-repeat;
+  background-position: right 24px bottom 9px;
 }
 .price-section__text {
   text-align: center;
@@ -659,8 +672,21 @@ p {
   border: 1px solid #ff553e;
   border-radius: 80px;
   width: 470px;
-  height: 100%;
+  height: auto;
   z-index: 3;
+  position: relative;
+}
+.price-section__card::before {
+  content: "";
+  position: absolute;
+  background-image: url(../assets/images/price-line.png);
+  background-repeat: no-repeat;
+  width: 136px;
+  height: 217px;
+  top: 20px;
+  right: calc(0% - 180px);
+  background-size: contain;
+  z-index: -9;
 }
 .price-section__card--free {
   background-color: white;
@@ -681,6 +707,7 @@ p {
 .price-section__card--premium .price-section__price,
 .price-section__card--premium .price-section__features li {
   color: white;
+  opacity: initial;
 }
 .price-section__card--premium .price-section__button {
   background-color: white;
@@ -692,20 +719,22 @@ p {
 }
 .price-section__card--title {
   font-size: 48px;
-  padding: 64px 0;
+  padding-top: 64px;
   font-family: Inter;
   font-weight: 600;
   text-align: center;
   color: #404040;
 }
 .price-section__features {
-  font-size: 38px;
+  font-size: 28px;
   line-height: 1.8;
   color: #ff553e;
+  opacity: 80%;
   text-align: center;
   padding-bottom: 64px;
   font-family: Inter;
   font-weight: 600;
+  padding-top: 56px;
 }
 .price-section__price {
   font-weight: 500;
@@ -716,8 +745,8 @@ p {
 }
 .price-section__button {
   margin-bottom: 48px;
-  padding: 15px 30px;
-  border-radius: 30px;
+  padding: 24px 40px;
+  border-radius: 35px;
   font-family: Inter;
   font-weight: 600;
   font-size: 18px;
@@ -839,6 +868,7 @@ p {
   margin-top: -160px;
   z-index: 1;
   padding: 30px;
+  margin-bottom: 80px;
 }
 .partners-section__card.soft-lavender {
   grid-column: 1;
@@ -849,6 +879,7 @@ p {
   max-width: 500px;
   display: flex;
   flex-direction: column;
+  padding-top: 128px;
 }
 .partners-section__item {
   font-size: 42px;
@@ -861,7 +892,6 @@ p {
   background-position: 131px 28px;
 }
 .partners-section__text {
-  font-family: Inter;
   font-weight: 400;
   font-size: 18px;
   line-height: 2;
@@ -894,11 +924,23 @@ p {
   margin-bottom: 140px;
 }
 .client-section__title {
+  font-weight: 600;
   font-size: 48px;
+  line-height: 1.5;
   margin-top: 173px;
+  color: #18063c;
+}
+.client-section__title--accent {
+  background-image: url(../assets/images/Shape.png);
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 .client-section__subtitle {
+  font-weight: 400;
   font-size: 18px;
+  line-height: 2;
+  color: #404040;
+  opacity: 80%;
   margin-top: 20px;
 }
 .client-section .comment {
@@ -913,14 +955,22 @@ p {
 }
 .client-section .comment__text {
   font-size: 20px;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #404040;
+  opacity: 80%;
   margin-top: 65px;
 }
 .client-section .comment__author {
   font-size: 24px;
+  font-weight: 500;
+  color: #38363c;
   margin-top: 36px;
 }
 .client-section .comment__role {
   font-size: 18px;
+  color: #38363c;
+  opacity: 80%;
   margin-top: 16px;
 }
 .client-section .comment .dots {
