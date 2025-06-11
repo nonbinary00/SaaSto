@@ -141,6 +141,32 @@ p {
   transform: scale(0.9);
 }
 
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+.back-to-top_visible {
+  /* Модификатор */
+  opacity: 0.8;
+  display: flex;
+}
+.back-to-top:hover {
+  /* Псевдокласс */
+  opacity: 1 !important;
+  transform: translateY(-3px);
+}
+
 .hero-section {
   padding-top: 220px;
   background-color: #fff8f2;
