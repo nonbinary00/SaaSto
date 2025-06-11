@@ -1151,7 +1151,6 @@ p {
 }
 
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1164,7 +1163,6 @@ p {
   display: flex;
 }
 .modal__login-wrapper, .modal__sign-up-wrapper {
-  display: none;
   position: relative;
   bottom: auto;
   height: 840px;
@@ -1264,6 +1262,8 @@ p {
 .modal__login-text, .modal__sign-up-text {
   padding-top: 5px;
   margin-top: 40px;
+  color: #404040;
+  opacity: 0.7;
 }
 .modal__login-text--decor, .modal__sign-up-text--decor {
   margin: 60px auto;
@@ -1319,4 +1319,100 @@ p {
 .modal__login-sing-up:hover {
   color: #5bc17f;
   transform: scale(1.2);
+}
+.modal__price-selection-wrapper {
+  position: relative;
+  bottom: auto;
+  display: grid;
+  width: 500px;
+  height: 840px;
+  margin: 40px auto 0;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
+  background-color: #fff8f2;
+  text-align: center;
+  z-index: 1000;
+}
+.modal__price-selection-wrapper.active {
+  display: block;
+}
+.modal__price-selection-logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal__price-selection-logo-wrapper svg {
+  display: block;
+  height: 24px;
+  width: 24px;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+.modal__price-selection-logo-wrapper img {
+  display: block;
+  height: 36px;
+  width: auto;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.modal__price-selection-title {
+  margin-top: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #18063c;
+}
+.modal__price-selection-text {
+  padding-top: 5px;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  color: #404040;
+  opacity: 0.7;
+}
+.modal__price-selection-text--decor {
+  margin: 60px auto;
+  text-transform: uppercase;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(64, 64, 64, 0.4);
+  border-radius: 10px;
+}
+.modal__price-selection-text--decor:after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: auto;
+  bottom: 50%;
+  width: 600%;
+  height: 1px;
+  background-color: rgba(64, 64, 64, 0.4);
+}
+.modal__price-selection-text--decor::before {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 40px;
+  bottom: 50%;
+  width: 600%;
+  height: 1px;
+  background-color: rgba(64, 64, 64, 0.4);
+}
+.modal__price-selection-button-wrapper {
+  display: flex;
+  justify-content: space-around;
+}
+.modal__price-selection-button svg {
+  width: 175px;
+  height: 75px;
+  border-radius: 40px;
+  fill: #ff553e;
+}
+.modal__price-selection-button svg:hover {
+  fill: #ffffff;
+}
+
+.button-type-1 {
+  width: 175px;
+  height: 75px;
+  border-radius: 40px;
 }/*# sourceMappingURL=styles.css.map */
