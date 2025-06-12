@@ -13,4 +13,6 @@
 @use "./layout/client-section";
 @use "./layout/get-it-section";
 @use "./layout/footer";
-@use "./components/modal";
+@use "./components/modal_login";
+@use "./components/modal_sing-up";
+@use "./components/modal_price-selection";

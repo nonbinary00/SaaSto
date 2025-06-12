@@ -15,6 +15,10 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/x-icon" href="assets/svg/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <title>SaaSto</title>
   </head>
   <body>
@@ -33,12 +37,8 @@
           </ul>
         </nav>
         <div class="header__button-wrapper">
-          <button class="header__button button-type-1 button-login">
-            Login
-          </button>
-          <button class="header__button button-type-1 button-sign-up">
-            Sign up
-          </button>
+          <button class="header__button button-login">Login</button>
+          <button class="header__button button-sign-up">Sign up</button>
         </div>
       </div>
     </header>
@@ -328,7 +328,7 @@
                 ><span class="price-section__amount">30</span
                 ><span class="price-section__period">/Forever</span>
               </div>
-              <button class="price-section__button" type="button">
+              <button class="price-section__button button-type-1" type="button">
                 Start 14 Days Trial
               </button>
             </div>
@@ -375,31 +375,201 @@
           <p class="client-section__subtitle">
             Grow your business with using us
           </p>
-
-          <div class="comment">
-            <div class="comment__img">
-              <svg width="298" height="379" viewBox="0 0 298 379">
-                <use
-                  href="./assets/svg/client-section.svg#icon-Rounded-rectangle"
-                ></use>
-              </svg>
-            </div>
-
-            <div>
-              <p class="comment__text">
-                Leading an organization is incredibly rewarding and equally
-                humbling. Confidence and humility. Every success is built on
-                lessons from mistakes made is incredibly rewarding
-              </p>
-              <p class="comment__author">Mila McSabbu</p>
-              <p class="comment__role">Designer</p>
-
-              <div class="dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+          <div class="slider slider--comment swiper">
+            <div class="slider__wrapper swiper-wrapper">
+              <div class="slider__slide swiper-slide">
+                <div class="comment">
+                  <div class="comment__img-wrapper">
+                    <svg
+                      class="comment__shape"
+                      width="298"
+                      height="379"
+                      viewBox="0 0 298 379"
+                    >
+                      <use
+                        href="./assets/svg/client-section.svg#icon-Rounded-rectangle"
+                      ></use>
+                    </svg>
+                    <img
+                      class="comment__avatar"
+                      src="./assets/images/avatar_1.png"
+                      alt="Mila McSabbu"
+                    />
+                  </div>
+                  <div class="comment__content">
+                    <p class="comment__text">
+                      Leading an organization is incredibly rewarding and
+                      equally humbling. Confidence and humility. Every success
+                      is built on lessons from mistakes made is incredibly
+                      rewarding.
+                    </p>
+                    <p class="comment__author">Mila McSabbu</p>
+                    <p class="comment__role">Designer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__slide swiper-slide">
+                <div class="comment">
+                  <div class="comment__img-wrapper">
+                    <svg
+                      class="comment__shape"
+                      width="298"
+                      height="379"
+                      viewBox="0 0 298 379"
+                    >
+                      <use
+                        href="./assets/svg/client-section.svg#icon-Rounded-rectangle"
+                      ></use>
+                    </svg>
+                    <img
+                      class="comment__avatar"
+                      src="./assets/images/avatar_2.png"
+                      alt="Mila McSabbu"
+                    />
+                  </div>
+                  <div class="comment__content">
+                    <p class="comment__text">
+                      Leading others is a mix of pride and perspective.
+                      Confidence fuels progress, but humility keeps you rooted.
+                      Every milestone is a reminder that growth comes from both
+                      triumphs and mistakes.
+                    </p>
+                    <p class="comment__author">Leo Adamson</p>
+                    <p class="comment__role">SEO</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__slide swiper-slide">
+                <div class="comment">
+                  <div class="comment__img-wrapper">
+                    <svg
+                      class="comment__shape"
+                      width="298"
+                      height="379"
+                      viewBox="0 0 298 379"
+                    >
+                      <use
+                        href="./assets/svg/client-section.svg#icon-Rounded-rectangle"
+                      ></use>
+                    </svg>
+                    <img
+                      class="comment__avatar"
+                      src="./assets/images/avatar_3.png"
+                      alt="Mila McSabbu"
+                    />
+                  </div>
+                  <div class="comment__content">
+                    <p class="comment__text">
+                      True leadership blends strength and self-awareness.
+                      Confidence helps you take charge, while humility ensures
+                      you stay open to feedback. Success is sweeter when you
+                      recognize the lessons behind it.
+                    </p>
+                    <p class="comment__author">Mike Kirk</p>
+                    <p class="comment__role">Devoloper</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__slide swiper-slide">
+                <div class="comment">
+                  <div class="comment__img-wrapper">
+                    <svg
+                      class="comment__shape"
+                      width="298"
+                      height="379"
+                      viewBox="0 0 298 379"
+                    >
+                      <use
+                        href="./assets/svg/client-section.svg#icon-Rounded-rectangle"
+                      ></use>
+                    </svg>
+                    <img
+                      class="comment__avatar"
+                      src="./assets/images/avatar_4.png"
+                      alt="Mila McSabbu"
+                    />
+                  </div>
+                  <div class="comment__content">
+                    <p class="comment__text">
+                      Great leadership is built on experience—both wins and
+                      losses. Confidence pushes you forward, while humility
+                      keeps you open to growth. Every achievement is a reminder
+                      of how far you’ve come and how much more there is to
+                      learn.
+                    </p>
+                    <p class="comment__author">Sasha Leman</p>
+                    <p class="comment__role">Manager</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__slide swiper-slide">
+                <div class="comment">
+                  <div class="comment__img-wrapper">
+                    <svg
+                      class="comment__shape"
+                      width="298"
+                      height="379"
+                      viewBox="0 0 298 379"
+                    >
+                      <use
+                        href="./assets/svg/client-section.svg#icon-Rounded-rectangle"
+                      ></use>
+                    </svg>
+                    <img
+                      class="comment__avatar"
+                      src="./assets/images/avatar_5.png"
+                      alt="Mila McSabbu"
+                    />
+                  </div>
+                  <div class="comment__content">
+                    <p class="comment__text">
+                      Leading a team is both inspiring and eye-opening. You
+                      celebrate victories but also learn from setbacks.
+                      Confidence drives decisions, while humility reminds you
+                      there’s always more to learn. The best leaders embrace
+                      both.
+                    </p>
+                    <p class="comment__author">Silvia Bishop</p>
+                    <p class="comment__role">Content Creator</p>
+                  </div>
+                </div>
+              </div>
+              <div class="slider__slide swiper-slide">
+                <div class="comment">
+                  <div class="comment__img-wrapper">
+                    <svg
+                      class="comment__shape"
+                      width="298"
+                      height="379"
+                      viewBox="0 0 298 379"
+                    >
+                      <use
+                        href="./assets/svg/client-section.svg#icon-Rounded-rectangle"
+                      ></use>
+                    </svg>
+                    <img
+                      class="comment__avatar"
+                      src="./assets/images/avatar_6.png"
+                      alt="Mila McSabbu"
+                    />
+                  </div>
+                  <div class="comment__content">
+                    <p class="comment__text">
+                      Leadership is a journey of growth and learning. Every
+                      challenge teaches something new, and every success comes
+                      from past failures. Confidence guides you, while humility
+                      keeps you grounded. The balance of both makes the
+                      experience truly fulfilling.
+                    </p>
+                    <p class="comment__author">Joe MacAdam</p>
+                    <p class="comment__role">Designer</p>
+                  </div>
+                </div>
               </div>
             </div>
+
+            <!-- Пагинация -->
+            <div class="slider__pagination swiper-pagination"></div>
           </div>
 
           <img
@@ -728,5 +898,7 @@
       </div>
     </div>
     <script src="./js/open_modal.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
 </html>

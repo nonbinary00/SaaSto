@@ -112,6 +112,7 @@ p {
   color: #ff553e;
   border-radius: 34px;
   border: 1px solid #ff553e;
+  background-color: #fff8f2;
   transition: background-color 0.4s ease, transform 0.4s ease;
 }
 .button-type-1:hover {
@@ -128,9 +129,9 @@ p {
   font-weight: 500;
   font-size: 18px;
   color: #ffffff;
-  background-color: #ff553e;
-  border: 1px solid #ff553e;
   border-radius: 34px;
+  border: 1px solid #ff553e;
+  background-color: #ff553e;
   transition: background-color 0.3s ease, transform 0.4s ease;
 }
 .button-type-2:hover {
@@ -138,6 +139,27 @@ p {
   background-color: #fff8f2;
 }
 .button-type-2:active {
+  transform: scale(0.9);
+}
+
+.button-login,
+.button-sign-up {
+  padding: 16px 32px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 18px;
+  color: #ff553e;
+  border-radius: 37px;
+  border: 1px solid #ff553e;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+}
+.button-login:hover,
+.button-sign-up:hover {
+  color: #ffffff;
+  background-color: #ff553e;
+}
+.button-login:active,
+.button-sign-up:active {
   transform: scale(0.9);
 }
 
@@ -707,17 +729,6 @@ p {
   background-size: contain;
   z-index: -9;
 }
-.price-section__card--free {
-  background-color: white;
-}
-.price-section__card--free .price-section__button {
-  background-color: #ff553e;
-  color: white;
-  border: 1px solid #ff553e;
-}
-.price-section__card--free .price-section__button:hover {
-  background-color: #e04b38;
-}
 .price-section__card--premium {
   background-color: #ff553e;
 }
@@ -727,14 +738,6 @@ p {
 .price-section__card--premium .price-section__features li {
   color: white;
   opacity: initial;
-}
-.price-section__card--premium .price-section__button {
-  background-color: white;
-  color: #ff553e;
-  border: 1px solid white;
-}
-.price-section__card--premium .price-section__button:hover {
-  background-color: #f5f5f5;
 }
 .price-section__card--title {
   font-size: 48px;
@@ -763,15 +766,10 @@ p {
   color: #404040;
 }
 .price-section__button {
+  width: 400px;
   margin-bottom: 48px;
   padding: 24px 40px;
-  border-radius: 35px;
-  font-family: Inter;
-  font-weight: 600;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  border-radius: 40px;
 }
 .price-section__currency {
   font-size: 18px;
@@ -961,22 +959,65 @@ p {
   opacity: 80%;
   margin-top: 20px;
 }
+.client-section .slider--comment {
+  position: relative;
+}
+.client-section .slider--comment .slider__wrapper {
+  display: flex;
+}
+.client-section .slider--comment .slider__pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 40px;
+}
+.client-section .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #ff553e;
+  opacity: 0.2;
+  border-radius: 50%;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.client-section .swiper-pagination-bullet-active {
+  opacity: 1;
+}
 .client-section .comment {
-  margin-top: 60px;
   display: flex;
   gap: 48px;
   text-align: left;
+  margin-top: 60px;
 }
-.client-section .comment__img {
+.client-section .comment__img-wrapper {
+  position: relative;
   width: 298px;
   height: 379px;
+  flex-shrink: 0;
+}
+.client-section .comment__shape {
+  width: 100%;
+  height: 100%;
+}
+.client-section .comment__avatar {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.client-section .comment__content {
+  flex: 1;
 }
 .client-section .comment__text {
   font-size: 20px;
   font-weight: 400;
   line-height: 1.8;
   color: #404040;
-  opacity: 80%;
+  opacity: 0.8;
   margin-top: 65px;
 }
 .client-section .comment__author {
@@ -988,21 +1029,8 @@ p {
 .client-section .comment__role {
   font-size: 18px;
   color: #38363c;
-  opacity: 80%;
+  opacity: 0.8;
   margin-top: 16px;
-}
-.client-section .comment .dots {
-  margin-top: 28px;
-}
-.client-section .comment .dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background: #ff553e;
-  opacity: 20%;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
 }
 .client-section__like-shape {
   width: 220px;
@@ -1151,6 +1179,7 @@ p {
 }
 
 .modal {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1162,7 +1191,8 @@ p {
 .modal.active {
   display: flex;
 }
-.modal__login-wrapper, .modal__sign-up-wrapper {
+.modal__login-wrapper {
+  display: none;
   position: relative;
   bottom: auto;
   height: 840px;
@@ -1175,23 +1205,23 @@ p {
   text-align: center;
   z-index: 1000;
 }
-.modal__login-wrapper.active, .modal__sign-up-wrapper.active {
+.modal__login-wrapper.active {
   display: block;
 }
-.modal__login-form, .modal__sign-up-form {
+.modal__login-form {
   width: 400px;
   margin: 0 50px;
   font-family: "Inter", sans-serif;
   font-size: 20px;
 }
-.modal__login-title-wrapper, .modal__sign-up-title-wrapper {
+.modal__login-title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 30px;
   margin-top: 40px;
 }
-.modal__login-title, .modal__sign-up-title {
+.modal__login-title {
   text-transform: uppercase;
   text-align: left;
 }
@@ -1211,12 +1241,12 @@ p {
 .modal__closes svg:active {
   transform: scale(0.9);
 }
-.modal__login-email, .modal__login-password, .modal__sign-up-email, .modal__sign-up-password, .modal__sign-up-repeat-password {
+.modal__login-email, .modal__login-password {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
 }
-.modal__login-email--focus, .modal__login-password--focus, .modal__sign-up-email--focus, .modal__sign-up-password--focus, .modal__sign-up-repeat-password--focus {
+.modal__login-email--focus, .modal__login-password--focus {
   width: 100%;
   height: 50px;
   margin-top: 10px;
@@ -1225,17 +1255,17 @@ p {
   border-radius: 10px;
   background-color: #ffffff;
 }
-.modal__login-email--focus:focus, .modal__login-password--focus:focus, .modal__sign-up-email--focus:focus, .modal__sign-up-password--focus:focus, .modal__sign-up-repeat-password--focus:focus {
+.modal__login-email--focus:focus, .modal__login-password--focus:focus {
   outline: none;
   box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
 }
-.modal__login-remember, .modal__input-question {
+.modal__login-remember {
   display: flex;
   justify-content: start;
   align-items: center;
   font-size: 16px;
 }
-.modal__login-remember input, .modal__input-question input {
+.modal__login-remember input {
   width: 20px;
   margin: auto 20px auto 0;
   box-shadow: none;
@@ -1243,12 +1273,12 @@ p {
 .modal label {
   text-align: left;
 }
-.modal__login-button-wrapper, .modal__sign-up-button-wrapper {
+.modal__login-button-wrapper {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
 }
-.modal__login-button, .modal__sign-up-button {
+.modal__login-button {
   margin: 0 auto;
   width: 100%;
 }
@@ -1259,13 +1289,13 @@ p {
 .modal__login-link:hover {
   color: #ff553e;
 }
-.modal__login-text, .modal__sign-up-text {
+.modal__login-text {
   padding-top: 5px;
   margin-top: 40px;
   color: #404040;
   opacity: 0.7;
 }
-.modal__login-text--decor, .modal__sign-up-text--decor {
+.modal__login-text--decor {
   margin: 60px auto;
   text-transform: uppercase;
   position: relative;
@@ -1274,7 +1304,7 @@ p {
   border: 1px solid rgba(64, 64, 64, 0.4);
   border-radius: 10px;
 }
-.modal__login-text--decor:after, .modal__sign-up-text--decor:after {
+.modal__login-text--decor:after {
   content: "";
   position: absolute;
   left: 40px;
@@ -1284,7 +1314,7 @@ p {
   height: 1px;
   background-color: rgba(64, 64, 64, 0.4);
 }
-.modal__login-text--decor::before, .modal__sign-up-text--decor::before {
+.modal__login-text--decor::before {
   content: "";
   position: absolute;
   left: auto;
@@ -1294,19 +1324,19 @@ p {
   height: 1px;
   background-color: rgba(64, 64, 64, 0.4);
 }
-.modal__login-social-media, .modal__sign-up-social-media {
+.modal__login-social-media {
   display: flex;
   justify-content: space-around;
 }
-.modal__login-social-media a, .modal__sign-up-social-media a {
+.modal__login-social-media a {
   fill: #ff553e;
   transition: all 0.3s ease;
 }
-.modal__login-social-media a:hover, .modal__sign-up-social-media a:hover {
+.modal__login-social-media a:hover {
   fill: #5bc17f;
   transform: scale(1.2);
 }
-.modal__login-social-media svg, .modal__sign-up-social-media svg {
+.modal__login-social-media svg {
   width: 26px;
   height: auto;
 }
@@ -1319,6 +1349,176 @@ p {
 .modal__login-sing-up:hover {
   color: #5bc17f;
   transform: scale(1.2);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+}
+.modal.active {
+  display: flex;
+}
+.modal__sign-up-wrapper {
+  display: none;
+  position: relative;
+  bottom: auto;
+  height: 840px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
+  background-color: #fff8f2;
+  text-align: center;
+  z-index: 1000;
+}
+.modal__sign-up-wrapper.active {
+  display: block;
+}
+.modal__sign-up-form {
+  width: 400px;
+  margin: 0 50px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+}
+.modal__sign-up-title-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  margin-top: 40px;
+}
+.modal__sign-up-title {
+  text-transform: uppercase;
+  text-align: left;
+}
+.modal__closes {
+  display: block;
+}
+.modal__closes svg {
+  width: 24px;
+  height: auto;
+  fill: #ff553e;
+  transition: all 0.3s ease;
+}
+.modal__closes svg:hover {
+  fill: #5bc17f;
+  transform: scale(1.2);
+}
+.modal__closes svg:active {
+  transform: scale(0.9);
+}
+.modal__sign-up-email, .modal__sign-up-password, .modal__sign-up-repeat-password {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.modal__sign-up-email--focus, .modal__sign-up-password--focus, .modal__sign-up-repeat-password--focus {
+  width: 100%;
+  height: 50px;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: 1px solid #ff553e;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+.modal__sign-up-email--focus:focus, .modal__sign-up-password--focus:focus, .modal__sign-up-repeat-password--focus:focus {
+  outline: none;
+  box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
+}
+.modal__input-question {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 16px;
+}
+.modal__input-question input {
+  width: 20px;
+  margin: auto 20px auto 0;
+  box-shadow: none;
+}
+.modal label {
+  text-align: left;
+}
+.modal__sign-up-button-wrapper {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.modal__sign-up-button {
+  margin: 0 auto;
+  width: 100%;
+}
+.modal__sign-up-text {
+  padding-top: 5px;
+  margin-top: 40px;
+  color: #404040;
+  opacity: 0.7;
+}
+.modal__sign-up-text--decor {
+  margin: 60px auto;
+  text-transform: uppercase;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border: 1px solid rgba(64, 64, 64, 0.4);
+  border-radius: 10px;
+}
+.modal__sign-up-text--decor:after {
+  content: "";
+  position: absolute;
+  left: 40px;
+  right: auto;
+  bottom: 50%;
+  width: 600%;
+  height: 1px;
+  background-color: rgba(64, 64, 64, 0.4);
+}
+.modal__sign-up-text--decor::before {
+  content: "";
+  position: absolute;
+  left: auto;
+  right: 40px;
+  bottom: 50%;
+  width: 600%;
+  height: 1px;
+  background-color: rgba(64, 64, 64, 0.4);
+}
+.modal__sign-up-social-media {
+  display: flex;
+  justify-content: space-around;
+}
+.modal__sign-up-social-media a {
+  fill: #ff553e;
+  transition: all 0.3s ease;
+}
+.modal__sign-up-social-media a:hover {
+  fill: #5bc17f;
+  transform: scale(1.2);
+}
+.modal__sign-up-social-media svg {
+  width: 26px;
+  height: auto;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+}
+.modal.active {
+  display: flex;
 }
 .modal__price-selection-wrapper {
   position: relative;
