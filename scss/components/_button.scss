@@ -1,12 +1,13 @@
-@use '../utils/variables' as *;
+@use "../utils/variables" as *;
 .button-type-1 {
   padding: 16px 32px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 500;
   font-size: $fs-18-16;
   color: $color-coral;
   border-radius: 34px;
   border: 1px solid $color-coral;
+  background-color: $color-ivory;
   transition: background-color 0.4s ease, transform 0.4s ease;
 
   &:hover {
@@ -20,19 +21,40 @@
 }
 .button-type-2 {
   padding: 16px 32px;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 500;
   font-size: $fs-18-16;
   color: $color-white;
-  background-color: $color-coral;
-  border: 1px solid $color-coral;
   border-radius: 34px;
+  border: 1px solid $color-coral;
+  background-color: $color-coral;
   transition: background-color 0.3s ease, transform 0.4s ease;
 
   &:hover {
     color: $color-coral;
     background-color: $color-ivory;
   }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.button-login,
+.button-sign-up {
+  padding: 16px 32px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: $fs-18-16;
+  color: $color-coral;
+  border-radius: 37px;
+  border: 1px solid $color-coral;
+  transition: background-color 0.4s ease, transform 0.4s ease;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-coral;
+  }
+
   &:active {
     transform: scale(0.9);
   }
@@ -54,13 +76,11 @@
   transition: opacity 0.3s;
 
   &_visible {
-    /* Модификатор */
     opacity: 0.8;
     display: flex;
   }
 
   &:hover {
-    /* Псевдокласс */
     opacity: 1 !important;
     transform: translateY(-3px);
   }

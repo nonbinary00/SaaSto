@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use "../utils/variables" as *;
 
 .price-section {
   &__container {
@@ -61,7 +61,7 @@
     position: relative;
 
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       background-image: url(../assets/images/Handd1.png);
       background-repeat: no-repeat;
@@ -76,7 +76,7 @@
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       background-image: url(../assets/images/hourglass.png);
       background-repeat: no-repeat;
@@ -102,7 +102,7 @@
     position: relative;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       background-image: url(../assets/images/price-line.png);
       background-repeat: no-repeat;
@@ -114,20 +114,6 @@
       z-index: -9;
     }
 
-    &--free {
-      background-color: white;
-
-      .price-section__button {
-        background-color: $color-coral;
-        color: white;
-        border: 1px solid $color-coral;
-
-        &:hover {
-          background-color: #e04b38;
-        }
-      }
-    }
-
     &--premium {
       background-color: $color-coral;
 
@@ -137,16 +123,6 @@
       .price-section__features li {
         color: white;
         opacity: initial;
-      }
-
-      .price-section__button {
-        background-color: white;
-        color: $color-coral;
-        border: 1px solid white;
-
-        &:hover {
-          background-color: #f5f5f5;
-        }
       }
     }
 
@@ -181,15 +157,10 @@
   }
 
   &__button {
+    width: 400px;
     margin-bottom: 48px;
     padding: 24px 40px;
-    border-radius: 35px;
-    font-family: Inter;
-    font-weight: 600;
-    font-size: $fs-18-16;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    border-radius: 40px;
   }
 
   &__currency {
@@ -246,7 +217,7 @@
     &:before {
       background-color: $color-coral;
       bottom: 4px;
-      content: '';
+      content: "";
       height: 26px;
       left: 4px;
       position: absolute;

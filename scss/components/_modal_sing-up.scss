@@ -14,7 +14,6 @@
     display: flex;
   }
 
-  &__login-wrapper,
   &__sign-up-wrapper {
     display: none;
     position: relative;
@@ -34,7 +33,6 @@
     }
   }
 
-  &__login-form,
   &__sign-up-form {
     width: 400px;
     margin: 0 50px;
@@ -42,7 +40,6 @@
     font-size: $fs-20-16;
   }
 
-  &__login-title-wrapper,
   &__sign-up-title-wrapper {
     display: flex;
     justify-content: space-between;
@@ -51,7 +48,6 @@
     margin-top: 40px;
   }
 
-  &__login-title,
   &__sign-up-title {
     text-transform: uppercase;
     text-align: left;
@@ -75,8 +71,6 @@
     }
   }
 
-  &__login-email,
-  &__login-password,
   &__sign-up-email,
   &__sign-up-password,
   &__sign-up-repeat-password {
@@ -99,7 +93,6 @@
     }
   }
 
-  &__login-remember,
   &__input-question {
     display: flex;
     justify-content: start;
@@ -117,31 +110,22 @@
     text-align: left;
   }
 
-  &__login-button-wrapper,
   &__sign-up-button-wrapper {
     margin-top: 60px;
     display: flex;
     flex-direction: column;
   }
 
-  &__login-button,
   &__sign-up-button {
     margin: 0 auto;
     width: 100%;
   }
 
-  &__login-link {
-    margin-top: 10px;
-    text-align: right;
-    &:hover {
-      color: $color-coral;
-    }
-  }
-
-  &__login-text,
   &__sign-up-text {
     padding-top: 5px;
     margin-top: 40px;
+    color: $color-charcoal;
+    opacity: 0.7;
 
     &--decor {
       margin: 60px auto;
@@ -174,7 +158,7 @@
       }
     }
   }
-  &__login-social-media,
+
   &__sign-up-social-media {
     display: flex;
     justify-content: space-around;
@@ -192,17 +176,6 @@
     & svg {
       width: 26px;
       height: auto;
-    }
-  }
-  &__login-sing-up {
-    display: block;
-    text-transform: uppercase;
-    text-decoration: underline;
-    transition: all 0.3s ease;
-
-    &:hover {
-      color: $color-social-hover;
-      transform: scale(1.2);
     }
   }
 }
