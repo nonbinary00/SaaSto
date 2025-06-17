@@ -60,3 +60,29 @@
     transform: scale(0.9);
   }
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 50px;
+  width: 100px;
+  height: 100px;
+  border: none;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+
+  &_visible {
+    opacity: 0.8;
+    display: flex;
+  }
+
+  &:hover {
+    opacity: 1 !important;
+    transform: translateY(-3px);
+  }
+}
