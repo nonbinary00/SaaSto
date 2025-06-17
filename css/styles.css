@@ -116,6 +116,7 @@ p {
   transition: background-color 0.4s ease, transform 0.4s ease;
 }
 .button-type-1:hover {
+  border: 1px solid #fff8f2;
   color: #ffffff;
   background-color: #ff553e;
 }
@@ -766,10 +767,9 @@ p {
   color: #404040;
 }
 .price-section__button {
-  width: 400px;
   margin-bottom: 48px;
   padding: 24px 40px;
-  border-radius: 40px;
+  border-radius: 38px;
 }
 .price-section__currency {
   font-size: 18px;
@@ -1601,6 +1601,11 @@ p {
   display: flex;
   justify-content: space-around;
 }
+.modal__price-selection-button {
+  width: 175px;
+  height: 75px;
+  border-radius: 40px;
+}
 .modal__price-selection-button svg {
   width: 175px;
   height: 75px;
@@ -1609,10 +1614,4 @@ p {
 }
 .modal__price-selection-button svg:hover {
   fill: #ffffff;
-}
-
-.button-type-1 {
-  width: 175px;
-  height: 75px;
-  border-radius: 40px;
 }/*# sourceMappingURL=styles.css.map */
