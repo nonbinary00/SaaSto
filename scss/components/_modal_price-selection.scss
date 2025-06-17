@@ -9,13 +9,14 @@
   height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
+  z-index: 2000;
 
   &.active {
     display: flex;
   }
 
   &__price-selection-wrapper {
-    // display: none;
+    display: none;
     position: relative;
     bottom: auto;
     display: grid;
@@ -26,7 +27,6 @@
     box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
     background-color: $color-ivory;
     text-align: center;
-    z-index: 1000;
 
     &.active {
       display: block;

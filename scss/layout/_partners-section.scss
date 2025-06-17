@@ -1,4 +1,4 @@
-@use '../utils/variables' as *;
+@use "../utils/variables" as *;
 
 .partners-section {
   padding: 120px 20px;
@@ -96,21 +96,24 @@
   }
 
   &__button {
-    border: 1px solid #ff553e;
-    border-radius: 40px;
+    display: block;
+    width: max-content;
+    // border: 1px solid #ff553e;
     padding: 24px 40px;
-    font-style: Poppins;
-    font-weight: 500;
-    line-height: 1.5;
-    color: #ff553e;
-    cursor: pointer;
-    width: 184px;
-    height: 76px;
-    transition: all 0.3s ease;
+    border-radius: 38px;
+    // font-style: Poppins;
+    // font-weight: 500;
+    // line-height: 1.5;
+    // color: #ff553e;
+    // cursor: pointer;
+    // width: 184px;
+    // height: 76px;
+    // transition: all 0.3s ease;
+    background-color: #f8fefe;
 
-    &:hover {
-      background-color: #ff553e;
-      color: #ffff;
-    }
+    // &:hover {
+    //   background-color: #ff553e;
+    //   color: #ffff;
+    // }
   }
 }

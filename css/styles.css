@@ -940,21 +940,11 @@ p {
   padding-bottom: 48px;
 }
 .partners-section__button {
-  border: 1px solid #ff553e;
-  border-radius: 40px;
+  display: block;
+  width: max-content;
   padding: 24px 40px;
-  font-style: Poppins;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #ff553e;
-  cursor: pointer;
-  width: 184px;
-  height: 76px;
-  transition: all 0.3s ease;
-}
-.partners-section__button:hover {
-  background-color: #ff553e;
-  color: white;
+  border-radius: 38px;
+  background-color: #f8fefe;
 }
 
 .client-section__container {
@@ -1540,11 +1530,13 @@ p {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
+  z-index: 2000;
 }
 .modal.active {
   display: flex;
 }
 .modal__price-selection-wrapper {
+  display: none;
   position: relative;
   bottom: auto;
   display: grid;
@@ -1555,7 +1547,6 @@ p {
   box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
   background-color: #fff8f2;
   text-align: center;
-  z-index: 1000;
 }
 .modal__price-selection-wrapper.active {
   display: block;
