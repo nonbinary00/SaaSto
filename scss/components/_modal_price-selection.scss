@@ -1,6 +1,7 @@
 @use "../utils/variables" as *;
 
-.modal {
+.modal,
+.modal-price-selection {
   display: none;
   position: fixed;
   top: 0;
