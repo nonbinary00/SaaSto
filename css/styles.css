@@ -1192,7 +1192,8 @@ p {
   margin-left: -20%;
 }
 
-.modal {
+.modal,
+.modal-login {
   display: none;
   position: fixed;
   top: 0;
@@ -1202,10 +1203,12 @@ p {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
 }
-.modal.active {
+.modal.active,
+.modal-login.active {
   display: flex;
 }
-.modal__login-wrapper {
+.modal__login-wrapper,
+.modal-login__login-wrapper {
   display: none;
   position: relative;
   bottom: auto;
@@ -1219,48 +1222,60 @@ p {
   text-align: center;
   z-index: 1000;
 }
-.modal__login-wrapper.active {
+.modal__login-wrapper.active,
+.modal-login__login-wrapper.active {
   display: block;
 }
-.modal__login-form {
+.modal__login-form,
+.modal-login__login-form {
   width: 400px;
   margin: 0 50px;
   font-family: "Inter", sans-serif;
   font-size: 20px;
 }
-.modal__login-title-wrapper {
+.modal__login-title-wrapper,
+.modal-login__login-title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 30px;
   margin-top: 40px;
 }
-.modal__login-title {
+.modal__login-title,
+.modal-login__login-title {
   text-transform: uppercase;
   text-align: left;
 }
-.modal__closes {
+.modal__closes,
+.modal-login__closes {
   display: block;
 }
-.modal__closes svg {
+.modal__closes svg,
+.modal-login__closes svg {
   width: 24px;
   height: auto;
   fill: #ff553e;
   transition: all 0.3s ease;
 }
-.modal__closes svg:hover {
+.modal__closes svg:hover,
+.modal-login__closes svg:hover {
   fill: #5bc17f;
   transform: scale(1.2);
 }
-.modal__closes svg:active {
+.modal__closes svg:active,
+.modal-login__closes svg:active {
   transform: scale(0.9);
 }
-.modal__login-email, .modal__login-password {
+.modal__login-email, .modal__login-password,
+.modal-login__login-email,
+.modal-login__login-password {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
 }
-.modal__login-email--focus, .modal__login-password--focus {
+.modal__login-email--focus, .modal__login-password--focus,
+.modal-login__login-email--focus,
+.modal-login__login-password--focus {
   width: 100%;
   height: 50px;
   margin-top: 10px;
@@ -1269,47 +1284,58 @@ p {
   border-radius: 10px;
   background-color: #ffffff;
 }
-.modal__login-email--focus:focus, .modal__login-password--focus:focus {
+.modal__login-email--focus:focus, .modal__login-password--focus:focus,
+.modal-login__login-email--focus:focus,
+.modal-login__login-password--focus:focus {
   outline: none;
   box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
 }
-.modal__login-remember {
+.modal__login-remember,
+.modal-login__login-remember {
   display: flex;
   justify-content: start;
   align-items: center;
   font-size: 16px;
 }
-.modal__login-remember input {
+.modal__login-remember input,
+.modal-login__login-remember input {
   width: 20px;
   margin: auto 20px auto 0;
   box-shadow: none;
 }
-.modal label {
+.modal label,
+.modal-login label {
   text-align: left;
 }
-.modal__login-button-wrapper {
+.modal__login-button-wrapper,
+.modal-login__login-button-wrapper {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
 }
-.modal__login-button {
+.modal__login-button,
+.modal-login__login-button {
   margin: 0 auto;
   width: 100%;
 }
-.modal__login-link {
+.modal__login-link,
+.modal-login__login-link {
   margin-top: 10px;
   text-align: right;
 }
-.modal__login-link:hover {
+.modal__login-link:hover,
+.modal-login__login-link:hover {
   color: #ff553e;
 }
-.modal__login-text {
+.modal__login-text,
+.modal-login__login-text {
   padding-top: 5px;
   margin-top: 40px;
   color: #404040;
   opacity: 0.7;
 }
-.modal__login-text--decor {
+.modal__login-text--decor,
+.modal-login__login-text--decor {
   margin: 60px auto;
   text-transform: uppercase;
   position: relative;
@@ -1318,7 +1344,8 @@ p {
   border: 1px solid rgba(64, 64, 64, 0.4);
   border-radius: 10px;
 }
-.modal__login-text--decor:after {
+.modal__login-text--decor:after,
+.modal-login__login-text--decor:after {
   content: "";
   position: absolute;
   left: 40px;
@@ -1328,7 +1355,8 @@ p {
   height: 1px;
   background-color: rgba(64, 64, 64, 0.4);
 }
-.modal__login-text--decor::before {
+.modal__login-text--decor::before,
+.modal-login__login-text--decor::before {
   content: "";
   position: absolute;
   left: auto;
@@ -1338,34 +1366,41 @@ p {
   height: 1px;
   background-color: rgba(64, 64, 64, 0.4);
 }
-.modal__login-social-media {
+.modal__login-social-media,
+.modal-login__login-social-media {
   display: flex;
   justify-content: space-around;
 }
-.modal__login-social-media a {
+.modal__login-social-media a,
+.modal-login__login-social-media a {
   fill: #ff553e;
   transition: all 0.3s ease;
 }
-.modal__login-social-media a:hover {
+.modal__login-social-media a:hover,
+.modal-login__login-social-media a:hover {
   fill: #5bc17f;
   transform: scale(1.2);
 }
-.modal__login-social-media svg {
+.modal__login-social-media svg,
+.modal-login__login-social-media svg {
   width: 26px;
   height: auto;
 }
-.modal__login-sing-up {
+.modal__login-sing-up,
+.modal-login__login-sing-up {
   display: block;
   text-transform: uppercase;
   text-decoration: underline;
   transition: all 0.3s ease;
 }
-.modal__login-sing-up:hover {
+.modal__login-sing-up:hover,
+.modal-login__login-sing-up:hover {
   color: #5bc17f;
   transform: scale(1.2);
 }
 
-.modal {
+.modal,
+.modal-sign-up {
   display: none;
   position: fixed;
   top: 0;
@@ -1375,10 +1410,12 @@ p {
   background-color: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
 }
-.modal.active {
+.modal.active,
+.modal-sign-up.active {
   display: flex;
 }
-.modal__sign-up-wrapper {
+.modal__sign-up-wrapper,
+.modal-sign-up__sign-up-wrapper {
   display: none;
   position: relative;
   bottom: auto;
@@ -1390,50 +1427,64 @@ p {
   box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
   background-color: #fff8f2;
   text-align: center;
-  z-index: 1000;
+  z-index: 3000;
 }
-.modal__sign-up-wrapper.active {
+.modal__sign-up-wrapper.active,
+.modal-sign-up__sign-up-wrapper.active {
   display: block;
 }
-.modal__sign-up-form {
+.modal__sign-up-form,
+.modal-sign-up__sign-up-form {
   width: 400px;
   margin: 0 50px;
   font-family: "Inter", sans-serif;
   font-size: 20px;
 }
-.modal__sign-up-title-wrapper {
+.modal__sign-up-title-wrapper,
+.modal-sign-up__sign-up-title-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 30px;
   margin-top: 40px;
 }
-.modal__sign-up-title {
+.modal__sign-up-title,
+.modal-sign-up__sign-up-title {
   text-transform: uppercase;
   text-align: left;
 }
-.modal__closes {
+.modal__closes,
+.modal-sign-up__closes {
   display: block;
 }
-.modal__closes svg {
+.modal__closes svg,
+.modal-sign-up__closes svg {
   width: 24px;
   height: auto;
   fill: #ff553e;
   transition: all 0.3s ease;
 }
-.modal__closes svg:hover {
+.modal__closes svg:hover,
+.modal-sign-up__closes svg:hover {
   fill: #5bc17f;
   transform: scale(1.2);
 }
-.modal__closes svg:active {
+.modal__closes svg:active,
+.modal-sign-up__closes svg:active {
   transform: scale(0.9);
 }
-.modal__sign-up-email, .modal__sign-up-password, .modal__sign-up-repeat-password {
+.modal__sign-up-email, .modal__sign-up-password, .modal__sign-up-repeat-password,
+.modal-sign-up__sign-up-email,
+.modal-sign-up__sign-up-password,
+.modal-sign-up__sign-up-repeat-password {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
 }
-.modal__sign-up-email--focus, .modal__sign-up-password--focus, .modal__sign-up-repeat-password--focus {
+.modal__sign-up-email--focus, .modal__sign-up-password--focus, .modal__sign-up-repeat-password--focus,
+.modal-sign-up__sign-up-email--focus,
+.modal-sign-up__sign-up-password--focus,
+.modal-sign-up__sign-up-repeat-password--focus {
   width: 100%;
   height: 50px;
   margin-top: 10px;
@@ -1442,40 +1493,50 @@ p {
   border-radius: 10px;
   background-color: #ffffff;
 }
-.modal__sign-up-email--focus:focus, .modal__sign-up-password--focus:focus, .modal__sign-up-repeat-password--focus:focus {
+.modal__sign-up-email--focus:focus, .modal__sign-up-password--focus:focus, .modal__sign-up-repeat-password--focus:focus,
+.modal-sign-up__sign-up-email--focus:focus,
+.modal-sign-up__sign-up-password--focus:focus,
+.modal-sign-up__sign-up-repeat-password--focus:focus {
   outline: none;
   box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
 }
-.modal__input-question {
+.modal__input-question,
+.modal-sign-up__input-question {
   display: flex;
   justify-content: start;
   align-items: center;
   font-size: 16px;
 }
-.modal__input-question input {
+.modal__input-question input,
+.modal-sign-up__input-question input {
   width: 20px;
   margin: auto 20px auto 0;
   box-shadow: none;
 }
-.modal label {
+.modal label,
+.modal-sign-up label {
   text-align: left;
 }
-.modal__sign-up-button-wrapper {
+.modal__sign-up-button-wrapper,
+.modal-sign-up__sign-up-button-wrapper {
   margin-top: 60px;
   display: flex;
   flex-direction: column;
 }
-.modal__sign-up-button {
+.modal__sign-up-button,
+.modal-sign-up__sign-up-button {
   margin: 0 auto;
   width: 100%;
 }
-.modal__sign-up-text {
+.modal__sign-up-text,
+.modal-sign-up__sign-up-text {
   padding-top: 5px;
   margin-top: 40px;
   color: #404040;
   opacity: 0.7;
 }
-.modal__sign-up-text--decor {
+.modal__sign-up-text--decor,
+.modal-sign-up__sign-up-text--decor {
   margin: 60px auto;
   text-transform: uppercase;
   position: relative;
@@ -1484,7 +1545,8 @@ p {
   border: 1px solid rgba(64, 64, 64, 0.4);
   border-radius: 10px;
 }
-.modal__sign-up-text--decor:after {
+.modal__sign-up-text--decor:after,
+.modal-sign-up__sign-up-text--decor:after {
   content: "";
   position: absolute;
   left: 40px;
@@ -1494,7 +1556,8 @@ p {
   height: 1px;
   background-color: rgba(64, 64, 64, 0.4);
 }
-.modal__sign-up-text--decor::before {
+.modal__sign-up-text--decor::before,
+.modal-sign-up__sign-up-text--decor::before {
   content: "";
   position: absolute;
   left: auto;
@@ -1504,24 +1567,29 @@ p {
   height: 1px;
   background-color: rgba(64, 64, 64, 0.4);
 }
-.modal__sign-up-social-media {
+.modal__sign-up-social-media,
+.modal-sign-up__sign-up-social-media {
   display: flex;
   justify-content: space-around;
 }
-.modal__sign-up-social-media a {
+.modal__sign-up-social-media a,
+.modal-sign-up__sign-up-social-media a {
   fill: #ff553e;
   transition: all 0.3s ease;
 }
-.modal__sign-up-social-media a:hover {
+.modal__sign-up-social-media a:hover,
+.modal-sign-up__sign-up-social-media a:hover {
   fill: #5bc17f;
   transform: scale(1.2);
 }
-.modal__sign-up-social-media svg {
+.modal__sign-up-social-media svg,
+.modal-sign-up__sign-up-social-media svg {
   width: 26px;
   height: auto;
 }
 
-.modal {
+.modal,
+.modal-price-selection {
   display: none;
   position: fixed;
   top: 0;
@@ -1532,10 +1600,12 @@ p {
   backdrop-filter: blur(20px);
   z-index: 2000;
 }
-.modal.active {
+.modal.active,
+.modal-price-selection.active {
   display: flex;
 }
-.modal__price-selection-wrapper {
+.modal__price-selection-wrapper,
+.modal-price-selection__price-selection-wrapper {
   display: none;
   position: relative;
   bottom: auto;
@@ -1548,42 +1618,49 @@ p {
   background-color: #fff8f2;
   text-align: center;
 }
-.modal__price-selection-wrapper.active {
+.modal__price-selection-wrapper.active,
+.modal-price-selection__price-selection-wrapper.active {
   display: block;
 }
-.modal__price-selection-logo-wrapper {
+.modal__price-selection-logo-wrapper,
+.modal-price-selection__price-selection-logo-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.modal__price-selection-logo-wrapper svg {
+.modal__price-selection-logo-wrapper svg,
+.modal-price-selection__price-selection-logo-wrapper svg {
   display: block;
   height: 24px;
   width: 24px;
   margin-top: 20px;
   margin-right: 20px;
 }
-.modal__price-selection-logo-wrapper img {
+.modal__price-selection-logo-wrapper img,
+.modal-price-selection__price-selection-logo-wrapper img {
   display: block;
   height: 36px;
   width: auto;
   margin-top: 20px;
   margin-left: 20px;
 }
-.modal__price-selection-title {
+.modal__price-selection-title,
+.modal-price-selection__price-selection-title {
   margin-top: 100px;
   text-align: center;
   text-transform: uppercase;
   color: #18063c;
 }
-.modal__price-selection-text {
+.modal__price-selection-text,
+.modal-price-selection__price-selection-text {
   padding-top: 5px;
   margin-top: 60px;
   margin-bottom: 40px;
   color: #404040;
   opacity: 0.7;
 }
-.modal__price-selection-text--decor {
+.modal__price-selection-text--decor,
+.modal-price-selection__price-selection-text--decor {
   margin: 60px auto;
   text-transform: uppercase;
   position: relative;
@@ -1592,7 +1669,8 @@ p {
   border: 1px solid rgba(64, 64, 64, 0.4);
   border-radius: 10px;
 }
-.modal__price-selection-text--decor:after {
+.modal__price-selection-text--decor:after,
+.modal-price-selection__price-selection-text--decor:after {
   content: "";
   position: absolute;
   left: 40px;
@@ -1602,7 +1680,8 @@ p {
   height: 1px;
   background-color: rgba(64, 64, 64, 0.4);
 }
-.modal__price-selection-text--decor::before {
+.modal__price-selection-text--decor::before,
+.modal-price-selection__price-selection-text--decor::before {
   content: "";
   position: absolute;
   left: auto;
@@ -1612,21 +1691,25 @@ p {
   height: 1px;
   background-color: rgba(64, 64, 64, 0.4);
 }
-.modal__price-selection-button-wrapper {
+.modal__price-selection-button-wrapper,
+.modal-price-selection__price-selection-button-wrapper {
   display: flex;
   justify-content: space-around;
 }
-.modal__price-selection-button {
+.modal__price-selection-button,
+.modal-price-selection__price-selection-button {
   width: 175px;
   height: 75px;
   border-radius: 40px;
 }
-.modal__price-selection-button svg {
+.modal__price-selection-button svg,
+.modal-price-selection__price-selection-button svg {
   width: 175px;
   height: 75px;
   border-radius: 40px;
   fill: #ff553e;
 }
-.modal__price-selection-button svg:hover {
+.modal__price-selection-button svg:hover,
+.modal-price-selection__price-selection-button svg:hover {
   fill: #ffffff;
 }/*# sourceMappingURL=styles.css.map */
