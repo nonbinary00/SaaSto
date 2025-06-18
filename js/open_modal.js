@@ -7,15 +7,32 @@ document.addEventListener("DOMContentLoaded", function () {
   const switchToSignUp = document.querySelector(".modal__login-sing-up");
   const modals = document.querySelectorAll(".modal");
 
+  // Нова кнопка та модалка для price
+  const priceBtn = document.querySelector(".price-section__button");
+  const priceModalWrapper = document.querySelector(
+    ".modal__price-selection-wrapper"
+  );
+
   // Відкриття модалки логіну
-  loginBtn.addEventListener("click", () => {
-    showModal(loginModalWrapper);
-  });
+  if (loginBtn) {
+    loginBtn.addEventListener("click", () => {
+      showModal(loginModalWrapper);
+    });
+  }
 
   // Відкриття модалки реєстрації
-  signUpBtn.addEventListener("click", () => {
-    showModal(signUpModalWrapper);
-  });
+  if (signUpBtn) {
+    signUpBtn.addEventListener("click", () => {
+      showModal(signUpModalWrapper);
+    });
+  }
+
+  // Відкриття модалки price
+  if (priceBtn && priceModalWrapper) {
+    priceBtn.addEventListener("click", () => {
+      showModal(priceModalWrapper);
+    });
+  }
 
   // Закриття модалок по кнопці ✖
   closeButtons.forEach((btn) => {
@@ -25,12 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Перехід з логіну до реєстрації
-  switchToSignUp.addEventListener("click", (e) => {
-    e.preventDefault();
-    loginModalWrapper.classList.remove("active");
-    signUpModalWrapper.classList.add("active");
-    modals.forEach((modal) => modal.classList.add("active"));
-  });
+  if (switchToSignUp) {
+    switchToSignUp.addEventListener("click", (e) => {
+      e.preventDefault();
+      loginModalWrapper.classList.remove("active");
+      signUpModalWrapper.classList.add("active");
+      modals.forEach((modal) => modal.classList.add("active"));
+    });
+  }
 
   // Функції
   function showModal(modalWrapper) {
@@ -42,7 +61,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function hideAllModals() {
     document
-      .querySelectorAll(".modal__login-wrapper, .modal__sign-up-wrapper")
+      .querySelectorAll(
+        ".modal__login-wrapper, .modal__sign-up-wrapper, .modal__price-selection-wrapper"
+      )
       .forEach((wrapper) => {
         wrapper.classList.remove("active");
       });

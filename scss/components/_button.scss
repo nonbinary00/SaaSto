@@ -11,6 +11,7 @@
   transition: background-color 0.4s ease, transform 0.4s ease;
 
   &:hover {
+    border: 1px solid $color-ivory;
     color: $color-white;
     background-color: $color-coral;
   }
