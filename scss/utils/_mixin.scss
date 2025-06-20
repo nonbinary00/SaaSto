@@ -3,7 +3,7 @@
   $minValue,
   $maxValue,
   $minViewport: 320,
-  $maxViewport: 1440
+  $maxViewport: 1980
 ) {
   #{$property}: clamp(
     #{$minValue}px,
