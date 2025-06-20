@@ -1,4 +1,5 @@
 @use "../utils/variables" as *;
+@use "../utils/mixin" as *;
 
 .header {
   background-color: $color-ivory;
@@ -19,7 +20,7 @@
   &__nav ul {
     display: flex;
     justify-content: space-between;
-    width: 520px;
+    @include adaptive-clamp(width, 450, 520, 900, 1980);
   }
   &__nav-link {
     font-size: $fs-18-16;
@@ -33,6 +34,6 @@
 
   &__button-wrapper {
     display: flex;
-    gap: 10px;
+    @include adaptive-clamp(gap, 5, 10, 320, 1980);
   }
 }
