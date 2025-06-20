@@ -1,52 +1,75 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const loginBtn = document.querySelector(".button-login");
-  const signUpBtn = document.querySelector(".button-sign-up");
-  const loginModalWrapper = document.querySelector(".modal__login-wrapper");
-  const signUpModalWrapper = document.querySelector(".modal__sign-up-wrapper");
-  const closeButtons = document.querySelectorAll(".modal__closes");
-  const switchToSignUp = document.querySelector(".modal__login-sing-up");
-  const modals = document.querySelectorAll(".modal");
+  // Отримання всіх потрібних кнопок
+  const loginBtns = document.querySelectorAll(
+    ".button-login, .button-price-login"
+  );
+  const signUpBtns = document.querySelectorAll(
+    ".button-sign-up, .button-price-sign-up, .modal__login-sing-up"
+  );
+  const priceBtns = document.querySelectorAll(".price-section__button");
+  const closeBtns = document.querySelectorAll(".modal__closes");
 
-  // Відкриття модалки логіну
-  loginBtn.addEventListener("click", () => {
-    showModal(loginModalWrapper);
+  // Вікна-модалки
+  const modalLogin = document.querySelector(".modal-login");
+  const modalSignUp = document.querySelector(".modal-sign-up");
+  const modalPrice = document.querySelector(".modal-price-selection");
+
+  // Функція відкриття модалки
+  function showModal(modal) {
+    hideAllModals(); // Закрити всі перед відкриттям
+    if (modal) {
+      modal.classList.add("active");
+      document.body.classList.add("no-scroll");
+    }
+  }
+
+  // Функція закриття всіх модалок
+  function hideAllModals() {
+    document
+      .querySelectorAll(".modal-login, .modal-sign-up, .modal-price-selection")
+      .forEach((modal) => {
+        modal.classList.remove("active");
+      });
+    document.body.classList.remove("no-scroll");
+  }
+
+  // Відкриття modal-login
+  loginBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      showModal(modalLogin);
+    });
   });
 
-  // Відкриття модалки реєстрації
-  signUpBtn.addEventListener("click", () => {
-    showModal(signUpModalWrapper);
+  // Відкриття modal-sign-up
+  signUpBtns.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); // на випадок, якщо <a href="">
+      showModal(modalSignUp);
+    });
   });
 
-  // Закриття модалок по кнопці ✖
-  closeButtons.forEach((btn) => {
+  // Відкриття modal-price-selection
+  priceBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      showModal(modalPrice);
+    });
+  });
+
+  // Закриття модалок по ✖
+  closeBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
       hideAllModals();
     });
   });
 
-  // Перехід з логіну до реєстрації
-  switchToSignUp.addEventListener("click", (e) => {
-    e.preventDefault();
-    loginModalWrapper.classList.remove("active");
-    signUpModalWrapper.classList.add("active");
-    modals.forEach((modal) => modal.classList.add("active"));
-  });
-
-  // Функції
-  function showModal(modalWrapper) {
-    hideAllModals();
-    modalWrapper.classList.add("active");
-    modalWrapper.closest(".modal").classList.add("active");
-    document.body.classList.add("no-scroll");
-  }
-
-  function hideAllModals() {
-    document
-      .querySelectorAll(".modal__login-wrapper, .modal__sign-up-wrapper")
-      .forEach((wrapper) => {
-        wrapper.classList.remove("active");
+  document
+    .querySelectorAll(".modal-login, .modal-sign-up, .modal-price-selection")
+    .forEach((modal) => {
+      modal.addEventListener("click", function (e) {
+        const modalContent = modal.querySelector("div");
+        if (!modalContent.contains(e.target)) {
+          hideAllModals();
+        }
       });
-    modals.forEach((modal) => modal.classList.remove("active"));
-    document.body.classList.remove("no-scroll");
-  }
+    });
 });

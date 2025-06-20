@@ -1,0 +1,16 @@
+@mixin adaptive-clamp(
+  $property,
+  $minValue,
+  $maxValue,
+  $minViewport: 320,
+  $maxViewport: 1440
+) {
+  #{$property}: clamp(
+    #{$minValue}px,
+    calc(
+      #{$minValue}px + (#{$maxValue} - #{$minValue}) *
+        ((100vw - #{$minViewport}px) / #{($maxViewport - $minViewport)})
+    ),
+    #{$maxValue}px
+  );
+}
