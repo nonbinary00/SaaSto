@@ -1,1 +1,107 @@
 @use "../utils/variables" as *;
+@use "../utils/mixin" as *;
+
+.open {
+  display: flex !important;
+}
+
+.burger {
+  &__menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    overflow-y: auto;
+    padding: 50px 40px;
+    background-color: $color-ivory;
+    animation: burgerAnimation 0.4s;
+  }
+
+  &__logo {
+    margin: 0 auto 40px;
+
+    color: $color-white;
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  @keyframes burgerAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  &__menu-item {
+    color: $color-dark-maroon;
+    &:hover {
+      color: $color-coral;
+    }
+  }
+
+  &__icon {
+    display: none;
+    position: relative;
+    @include adaptive-clamp(top, -24, -30, 320, 768);
+    right: 0;
+    @include adaptive-clamp(left, 280, 725, 320, 768);
+    width: 24px;
+    height: 18px;
+    margin: auto 0;
+    z-index: 50;
+    align-items: center;
+
+    & span {
+      width: 100%;
+      height: 2px;
+      background-color: $color-coral;
+      transform: scale(1);
+      align-items: center;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $color-coral;
+      transition: all 0.3s ease 0s;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+    &.active span {
+      transform: scale(0);
+    }
+    &.active::before {
+      top: 50%;
+      transform: rotate(-45deg) translate(0, -50%);
+      background-color: $color-coral;
+    }
+    &.active::after {
+      bottom: 50%;
+      transform: rotate(45deg) translate(0, 50%);
+      background-color: $color-coral;
+    }
+    @media screen and (max-width: 768px) {
+      display: flex;
+    }
+  }
+}

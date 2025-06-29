@@ -37,9 +37,26 @@
           </ul>
         </nav>
         <div class="header__button-wrapper">
-          <button class="header__button button-login">Login</button>
+          <button class="header__button button-login">Log in</button>
           <button class="header__button button-sign-up">Sign up</button>
         </div>
+      </div>
+      <nav class="burger__menu">
+        <a class="burger__logo" href="#">
+          <div class="burder__logo">
+            <img src="./assets/images/Logo.png" alt="logo" />
+          </div>
+        </a>
+        <ul class="burger__menu-list">
+          <li><a class="burger__menu-item" href="#features">Features</a></li>
+          <li><a class="burger__menu-item" href="#reporting">Reporting</a></li>
+          <li><a class="burger__menu-item" href="#tracker">Tracker</a></li>
+          <li><a class="burger__menu-item" href="#price">Pricing</a></li>
+          <li><a class="burger__menu-item" href="#reviews">Reviews</a></li>
+        </ul>
+      </nav>
+      <div class="burger__icon">
+        <span></span>
       </div>
     </header>
     <main>
@@ -867,14 +884,10 @@
         </p>
 
         <div class="modal__price-selection-button-wrapper">
-          <button
-            class="modal__price-selection-button button-type-1 button-price-login"
-          >
-            Login
+          <button class="modal__price-selection-button button-price-login">
+            Log in
           </button>
-          <button
-            class="modal__price-selection-button button-type-1 button-price-sign-up"
-          >
+          <button class="modal__price-selection-button button-price-sign-up">
             Sign up
           </button>
         </div>
@@ -887,12 +900,12 @@
 
         <div class="modal__price-selection-button-wrapper">
           <a href="" target="_blank" class="modal__price-selection-button">
-            <svg class="button-type-1">
+            <svg>
               <use href="./assets/svg/get-it.svg#icon-AppStore"></use>
             </svg>
           </a>
           <a href="" target="_blank" class="modal__price-selection-button">
-            <svg class="button-type-1">
+            <svg>
               <use href="./assets/svg/get-it.svg#icon-GooglePlay"></use>
             </svg>
           </a>
@@ -902,6 +915,7 @@
     <button id="back-to-top" class="back-to-top">
       <img src="./assets/icon/стрелка-вверх-64.png" alt="" loading="lazy" />
     </button>
+    <script src="./js/burger_menu.js"></script>
     <script src="./js/open_modal.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
