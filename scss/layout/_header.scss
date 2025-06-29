@@ -8,19 +8,30 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: calc(178px + 212px + 780px);
-    padding-top: 40px;
+    max-width: 1140px;
+    padding-top: 20px;
+    @media screen and (max-width: 1180px) {
+      padding: 20px 16px 0;
+    }
   }
 
   &__logo {
-    min-width: 178px;
+    @include adaptive-clamp(width, 140, 178, 768, 1980);
     height: auto;
+    @media screen and (max-width: 768px) {
+      @include adaptive-clamp(width, 90, 140, 320, 768);
+    }
   }
 
   &__nav ul {
     display: flex;
     justify-content: space-between;
-    @include adaptive-clamp(width, 450, 520, 900, 1980);
+    margin: 0 10px;
+    @include adaptive-clamp(width, 390, 521, 768, 1980);
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   &__nav-link {
     font-size: $fs-18-16;
@@ -35,5 +46,9 @@
   &__button-wrapper {
     display: flex;
     @include adaptive-clamp(gap, 5, 10, 320, 1980);
+
+    @media screen and (max-width: 768px) {
+      margin-right: 40px;
+    }
   }
 }
