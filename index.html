@@ -37,9 +37,26 @@
           </ul>
         </nav>
         <div class="header__button-wrapper">
-          <button class="header__button button-login">Login</button>
+          <button class="header__button button-login">Log in</button>
           <button class="header__button button-sign-up">Sign up</button>
         </div>
+      </div>
+      <nav class="burger__menu">
+        <a class="burger__logo" href="#">
+          <div class="burder__logo">
+            <img src="./assets/images/Logo.png" alt="logo" />
+          </div>
+        </a>
+        <ul class="burger__menu-list">
+          <li><a class="burger__menu-item" href="#features">Features</a></li>
+          <li><a class="burger__menu-item" href="#reporting">Reporting</a></li>
+          <li><a class="burger__menu-item" href="#tracker">Tracker</a></li>
+          <li><a class="burger__menu-item" href="#price">Pricing</a></li>
+          <li><a class="burger__menu-item" href="#reviews">Reviews</a></li>
+        </ul>
+      </nav>
+      <div class="burger__icon">
+        <span></span>
       </div>
     </header>
     <main>
@@ -686,7 +703,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal">
+    <div class="modal modal-login">
       <div class="modal__login-wrapper">
         <form class="modal__login-form">
           <div class="modal__login-title-wrapper">
@@ -762,7 +779,7 @@
         </form>
       </div>
     </div>
-    <div class="modal">
+    <div class="modal modal-sign-up">
       <div class="modal__sign-up-wrapper">
         <form class="modal__sign-up-form">
           <div class="modal__sign-up-title-wrapper">
@@ -846,7 +863,7 @@
         </form>
       </div>
     </div>
-    <div class="modal">
+    <div class="modal modal-price-selection">
       <div class="modal__price-selection-wrapper">
         <div class="modal__price-selection-logo-wrapper">
           <div class="modal__price-selection-logo">
@@ -867,14 +884,10 @@
         </p>
 
         <div class="modal__price-selection-button-wrapper">
-          <button
-            class="modal__price-selection-button button-type-1 button-login"
-          >
-            Login
+          <button class="modal__price-selection-button button-price-login">
+            Log in
           </button>
-          <button
-            class="modal__price-selection-button button-type-1 button-sign-up"
-          >
+          <button class="modal__price-selection-button button-price-sign-up">
             Sign up
           </button>
         </div>
@@ -887,18 +900,22 @@
 
         <div class="modal__price-selection-button-wrapper">
           <a href="" target="_blank" class="modal__price-selection-button">
-            <svg class="button-type-1">
+            <svg>
               <use href="./assets/svg/get-it.svg#icon-AppStore"></use>
             </svg>
           </a>
           <a href="" target="_blank" class="modal__price-selection-button">
-            <svg class="button-type-1">
+            <svg>
               <use href="./assets/svg/get-it.svg#icon-GooglePlay"></use>
             </svg>
           </a>
         </div>
       </div>
     </div>
+    <button id="back-to-top" class="back-to-top">
+      <img src="./assets/icon/стрелка-вверх-64.png" alt="" loading="lazy" />
+    </button>
+    <script src="./js/burger_menu.js"></script>
     <script src="./js/open_modal.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
