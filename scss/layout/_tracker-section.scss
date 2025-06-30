@@ -12,15 +12,9 @@
     margin: 0 auto;
     // padding: 140px 20px 0 376px;
     box-sizing: border-box;
-    @include adaptive-clamp('padding-top', 40, 140); // От 40px до 140px
-    @include adaptive-clamp('padding-right', 15, 20); // От 15px до 20px
-    @include adaptive-clamp(
-      'padding-left',
-      15,
-      376,
-      320,
-      1440
-    ); // От 15px до 376px
+    @include adaptive-clamp('padding-top', 40, 140);
+    @include adaptive-clamp('padding-right', 15, 20);
+    @include adaptive-clamp('padding-left', 15, 376, 320, 1440);
 
     @media (max-width: 1000px) {
       padding-left: 16px;
@@ -62,19 +56,19 @@
     z-index: 2;
 
     @media (max-width: 1555px) {
-      width: 250px; // 50% от оригинального
+      width: 250px;
       height: 251px;
       background-size: contain;
     }
 
     @media (max-width: 1064px) {
-      width: 200px; // 50% от оригинального
+      width: 200px;
       height: 200px;
       background-size: contain;
       // display: none;
     }
     @media (max-width: 999px) {
-      // width: 115px; // ~30% от оригинального
+      // width: 115px;
       // height: 116px;
       display: none;
     }
@@ -98,7 +92,7 @@
     z-index: 2;
 
     @media (max-width: 1555px) {
-      width: 250px; // 50% от оригинального
+      width: 250px;
       height: 251px;
     }
 
@@ -284,6 +278,9 @@
 
     &:hover {
       transform: translateY(-5px);
+      @media (max-width: 768px) {
+        transform: translateY(0);
+      }
 
       @media (max-width: 768px) {
         // width: 100%;
