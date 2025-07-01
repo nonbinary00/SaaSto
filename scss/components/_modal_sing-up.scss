@@ -1,6 +1,8 @@
 @use "../utils/variables" as *;
+@use "../utils/mixin" as *;
 
-.modal {
+.modal,
+.modal-sign-up {
   display: none;
   position: fixed;
   top: 0;
@@ -18,7 +20,7 @@
     display: none;
     position: relative;
     bottom: auto;
-    height: 840px;
+    max-height: calc(100% - 35px);
     margin: auto;
     display: flex;
     align-items: center;
@@ -26,7 +28,7 @@
     box-shadow: 0 8px 20px rgba(134, 134, 134, 0.3);
     background-color: $color-ivory;
     text-align: center;
-    z-index: 1000;
+    z-index: 3000;
 
     &.active {
       display: block;
@@ -34,8 +36,8 @@
   }
 
   &__sign-up-form {
-    width: 400px;
-    margin: 0 50px;
+    @include adaptive-clamp(width, 288, 400, 320, 480);
+    margin: 0 10%;
     font-family: "Inter", sans-serif;
     font-size: $fs-20-16;
   }
@@ -76,13 +78,13 @@
   &__sign-up-repeat-password {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-top: 25px;
 
     &--focus {
       width: 100%;
       height: 50px;
-      margin-top: 10px;
-      padding: 10px 20px;
+      margin-top: 8px;
+      padding: 5px 10px;
       border: 1px solid $color-coral;
       border-radius: 10px;
       background-color: $color-white;
@@ -111,7 +113,7 @@
   }
 
   &__sign-up-button-wrapper {
-    margin-top: 60px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
   }
@@ -123,7 +125,7 @@
 
   &__sign-up-text {
     padding-top: 5px;
-    margin-top: 40px;
+    margin-top: 30px;
     color: $color-charcoal;
     opacity: 0.7;
 
@@ -141,7 +143,7 @@
         left: 40px;
         right: auto;
         bottom: 50%;
-        width: 600%;
+        @include adaptive-clamp(width, 100, 140, 320, 480);
         height: 1px;
         background-color: rgba(64, 64, 64, 0.4);
       }
@@ -152,7 +154,7 @@
         left: auto;
         right: 40px;
         bottom: 50%;
-        width: 600%;
+        @include adaptive-clamp(width, 100, 140, 320, 480);
         height: 1px;
         background-color: rgba(64, 64, 64, 0.4);
       }
@@ -162,7 +164,7 @@
   &__sign-up-social-media {
     display: flex;
     justify-content: space-around;
-
+    margin-bottom: 40px;
     a {
       fill: $color-coral;
       transition: all 0.3s ease;
