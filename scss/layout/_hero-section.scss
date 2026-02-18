@@ -55,12 +55,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1140px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
     gap: 120px;
-    padding: 56px 180px 42px;
+    padding: 56px 0 42px;
     background-color: $color-white;
-    border-top-right-radius: 120px;
+    border-top-right-radius: 18px;
+    overflow: hidden;
     background-image: url(../assets/images/background_hero-section_statistics.png);
     background-size: cover;
     background-position: top center;
