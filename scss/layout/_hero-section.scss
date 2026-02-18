@@ -55,8 +55,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 192px;
-    padding: 94px 280px 60px 0;
+    max-width: 1140px;
+    margin: 0 auto;
+    gap: 120px;
+    padding: 56px 180px 42px;
+    background-color: $color-white;
+    border-top-right-radius: 120px;
     background-image: url(../assets/images/background_hero-section_statistics.png);
     background-size: cover;
     background-position: top center;
@@ -68,9 +72,9 @@
   }
 
   &__statistics-title {
-    font-size: $fs-48-64;
+    font-size: $fs-48-24;
     font-weight: 600;
-    line-height: calc(64px / 48px);
+    line-height: calc(56px / 48px);
     color: $color-midnight-purple;
   }
   &__statistics-text {

@@ -27,13 +27,16 @@
     font-family: 'Poppins';
     color: $color-midnight-purple;
     font-size: $fs-48-24;
-    white-space: nowrap;
-    background-image: url(../assets/images/Shape.png);
-    background-repeat: no-repeat;
-    background-position: 212px 36px;
+    max-width: 700px;
     @media (max-width: 768px) {
       white-space: normal;
     }
+  }
+
+  &__title--accent {
+    background-image: url(../assets/images/Shape.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
   }
 
   &__text {
@@ -41,6 +44,7 @@
     font-size: $fs-18-16;
     line-height: 2;
     margin-top: 20px;
+    max-width: 560px;
     opacity: 0.8;
   }
 
@@ -115,7 +119,7 @@
   justify-content: space-between;
   align-items: flex-start;
   // gap: 28px;
-  @include adaptive-clamp('gap', 28, 48);
+  @include adaptive-clamp('gap', 36, 64);
   margin-top: 64px;
   position: relative;
 
@@ -135,7 +139,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     top: 270px;
-    left: -140px;
+    left: -100px;
     z-index: 1;
 
     @media (max-width: 1130px) {
@@ -154,7 +158,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     top: 35px;
-    left: 220px;
+    left: 300px;
     z-index: 1;
 
     @media (max-width: 1130px) {
@@ -165,8 +169,8 @@
 
 .tracker-section__options {
   flex: 1 1 50%;
-  max-width: 46%;
-  padding-right: 20px;
+  max-width: 48%;
+  padding-right: 40px;
   position: relative;
   z-index: 2;
 }
@@ -184,11 +188,7 @@
     @include adaptive-clamp('gap', 18, 48);
 
     &--offset {
-      transform: translateX(72px);
-
-      @media (max-width: 1280px) {
-        transform: translateX(0);
-      }
+      transform: translateX(0);
     }
   }
 
@@ -202,6 +202,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    max-width: 300px;
   }
 
   &__title {
@@ -226,8 +227,8 @@
 
 .statistics {
   flex: 1 1 50%;
-  max-width: 52%;
-  margin-top: -72px;
+  max-width: 46%;
+  margin-top: 0;
   position: relative;
   z-index: 2;
 
