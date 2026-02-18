@@ -63,6 +63,11 @@
     background-color: $color-white;
     border-top-right-radius: 120px;
     overflow: hidden;
+    background-image: linear-gradient($color-white, $color-white),
+      url(../assets/images/background_hero-section_statistics.png);
+    background-size: 100% 100%, auto 100%;
+    background-position: left top, right top;
+    background-repeat: no-repeat, no-repeat;
   }
 
   &__statistics-item {
