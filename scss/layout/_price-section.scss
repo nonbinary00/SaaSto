@@ -1,14 +1,13 @@
-@use "../utils/variables" as *;
+@use '../utils/variables' as *;
+@use '../utils/mixin' as *;
 
 .price-section {
   &__container {
     background-color: #fff;
-    padding-top: 140px;
-    // background-image: url(../assets/images/price-bg.png);
-    // background-position: 82% 189px;
-    // background-color: transparent;
-    // background-repeat: no-repeat;
-    margin-bottom: 160px;
+    // padding-top: 140px;
+    @include adaptive-clamp('padding-top', 80, 140);
+    // margin-bottom: 160px;
+    @include adaptive-clamp('margin-bottom', 80, 160);
   }
 
   &__title {
@@ -60,8 +59,15 @@
     gap: 30px;
     position: relative;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      padding-top: 40px;
+    }
+
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       background-image: url(../assets/images/Handd1.png);
       background-repeat: no-repeat;
@@ -73,10 +79,14 @@
       transform: translateY(-50%);
       z-index: 2;
       pointer-events: none;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       background-image: url(../assets/images/hourglass.png);
       background-repeat: no-repeat;
@@ -87,6 +97,10 @@
       top: -42px;
       z-index: 2;
       pointer-events: none;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
     }
   }
 
@@ -101,8 +115,16 @@
     z-index: 3;
     position: relative;
 
+    @include adaptive-clamp(width, 300, 470);
+    @include adaptive-clamp(border-radius, 40, 80);
+
+    @media (max-width: 768px) {
+      width: 90%;
+      max-width: 400px;
+    }
+
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       background-image: url(../assets/images/price-line.png);
       background-repeat: no-repeat;
@@ -112,6 +134,10 @@
       right: calc(0% - 180px);
       background-size: contain;
       z-index: -9;
+
+      @media (max-width: 1200px) {
+        display: none;
+      }
     }
 
     &--premium {
@@ -128,7 +154,8 @@
 
     &--title {
       font-size: $fs-48-24;
-      padding-top: 64px;
+      // padding-top: 64px;
+      @include adaptive-clamp('padding-top', 32, 64);
       font-family: Inter;
       font-weight: 600;
       text-align: center;
@@ -142,16 +169,19 @@
     color: $color-coral;
     opacity: 80%;
     text-align: center;
-    padding-bottom: 64px;
+    // padding-bottom: 64px;
+    @include adaptive-clamp('padding-bottom', 32, 64);
     font-family: Inter;
     font-weight: 600;
-    padding-top: 56px;
+    // padding-top: 56px;
+    @include adaptive-clamp('padding-top', 28, 56);
   }
 
   &__price {
     font-weight: 500;
     text-align: center;
-    padding-bottom: 64px;
+    // padding-bottom: 64px;
+    @include adaptive-clamp('padding-bottom', 32, 64);
     font-family: Inter;
     color: #404040;
   }
@@ -160,6 +190,13 @@
     margin-bottom: 48px;
     padding: 24px 40px;
     border-radius: 38px;
+
+    @include adaptive-clamp(margin-bottom, 24, 48);
+    @include adaptive-clamp(padding-top, 12, 24);
+    @include adaptive-clamp(padding-bottom, 12, 24);
+    @include adaptive-clamp(padding-left, 20, 40);
+    @include adaptive-clamp(padding-right, 20, 40);
+    @include adaptive-clamp(border-radius, 19, 38);
   }
 
   &__currency {
@@ -216,7 +253,7 @@
     &:before {
       background-color: $color-coral;
       bottom: 4px;
-      content: "";
+      content: '';
       height: 26px;
       left: 4px;
       position: absolute;

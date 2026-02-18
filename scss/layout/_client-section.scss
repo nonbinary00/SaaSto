@@ -1,4 +1,5 @@
 @use '../utils/variables' as *;
+@use '../utils/mixin' as *;
 
 .client-section {
   &__container {
@@ -15,6 +16,10 @@
     margin-top: 173px;
     color: $color-midnight-purple;
 
+    @media (max-width: 768px) {
+      text-align: left;
+    }
+
     &--accent {
       background-image: url(../assets/images/Shape.png);
       background-repeat: no-repeat;
@@ -29,6 +34,9 @@
     opacity: 80%;
 
     margin-top: 20px;
+    @media (max-width: 768px) {
+      text-align: left;
+    }
   }
 
   .slider--comment {
@@ -62,20 +70,32 @@
 
   .comment {
     display: flex;
-    gap: 48px;
+    // gap: 48px;
+    @include adaptive-clamp('gap', 30, 48);
     text-align: left;
     margin-top: 60px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
 
     &__img-wrapper {
       position: relative;
       width: 298px;
       height: 379px;
       flex-shrink: 0;
+      @media (max-width: 768px) {
+        height: 100%;
+      }
     }
 
     &__shape {
       width: 100%;
       height: 100%;
+      @media (max-width: 768px) {
+        width: 60%;
+        height: 60%;
+      }
     }
 
     &__avatar {
@@ -87,6 +107,13 @@
       object-fit: cover;
       border-radius: 50%;
       transform: translate(-50%, -50%);
+
+      @media (max-width: 768px) {
+        top: 45%;
+        left: 30%;
+        width: 150px;
+        height: 150px;
+      }
     }
 
     &__content {
@@ -100,6 +127,9 @@
       color: $color-charcoal;
       opacity: 0.8;
       margin-top: 65px;
+      @media (max-width: 768px) {
+        margin-top: 0;
+      }
     }
 
     &__author {
@@ -124,6 +154,13 @@
     top: -102px;
     left: -391px;
     z-index: -1;
+
+    @media (max-width: 768px) {
+      width: 62px;
+      height: 63px;
+      top: 140px;
+      left: 170px;
+    }
   }
   &__chat-shape {
     width: 196px;
@@ -132,6 +169,13 @@
     bottom: -24px;
     left: -185px;
     z-index: -1;
+
+    @media (max-width: 768px) {
+      width: 79px;
+      height: 81px;
+      bottom: 350px;
+      left: 330px;
+    }
   }
   &__emoji-shape {
     width: 126px;
@@ -140,17 +184,32 @@
     top: 475px;
     right: -210px;
     z-index: -1;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
   &__arrow-vector {
     position: absolute;
     top: 30px;
     left: -250px;
     z-index: -2;
+
+    @media (max-width: 768px) {
+      width: 62px;
+      height: 63px;
+      top: 220px;
+      left: 240px;
+    }
   }
   &__diamond-vector {
     position: absolute;
     top: 537px;
     right: -278px;
     z-index: -2;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 }

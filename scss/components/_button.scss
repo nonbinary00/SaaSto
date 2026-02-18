@@ -1,4 +1,5 @@
 @use "../utils/variables" as *;
+@use "../utils/mixin" as *;
 .button-type-1 {
   padding: 16px 32px;
   font-family: "Poppins";
@@ -42,7 +43,10 @@
 
 .button-login,
 .button-sign-up {
-  padding: 16px 32px;
+  @include adaptive-clamp(padding-top, 4, 16, 320, 1980);
+  @include adaptive-clamp(padding-bottom, 4, 16, 320, 1980);
+  @include adaptive-clamp(padding-left, 8, 32, 320, 1980);
+  @include adaptive-clamp(padding-right, 8, 32, 320, 1980);
   font-family: "Poppins";
   font-weight: 500;
   font-size: $fs-18-16;
@@ -50,6 +54,10 @@
   border-radius: 37px;
   border: 1px solid $color-coral;
   transition: background-color 0.4s ease, transform 0.4s ease;
+
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+  }
 
   &:hover {
     color: $color-white;

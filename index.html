@@ -25,9 +25,9 @@
     <header class="header">
       <div class="header__container">
         <div class="header__logo">
-          <img src="./assets/images/Logo.png" alt="logo" />
+          <img src="./assets/images/Logo.png" alt="SaaSto logo" />
         </div>
-        <nav class="header__nav">
+        <nav class="header__nav" aria-label="Primary navigation">
           <ul>
             <li><a class="header__nav-link" href="#features">Features</a></li>
             <li><a class="header__nav-link" href="#reporting">Reporting</a></li>
@@ -37,9 +37,26 @@
           </ul>
         </nav>
         <div class="header__button-wrapper">
-          <button class="header__button button-login">Login</button>
-          <button class="header__button button-sign-up">Sign up</button>
+          <button class="header__button button-login" type="button">Log in</button>
+          <button class="header__button button-sign-up" type="button">
+            Sign up
+          </button>
         </div>
+      </div>
+      <nav class="burger__menu" aria-label="Mobile navigation">
+        <a class="burger__logo" href="#">
+          <img src="./assets/images/Logo.png" alt="SaaSto logo" />
+        </a>
+        <ul class="burger__menu-list">
+          <li><a class="burger__menu-item" href="#features">Features</a></li>
+          <li><a class="burger__menu-item" href="#reporting">Reporting</a></li>
+          <li><a class="burger__menu-item" href="#tracker">Tracker</a></li>
+          <li><a class="burger__menu-item" href="#price">Pricing</a></li>
+          <li><a class="burger__menu-item" href="#reviews">Reviews</a></li>
+        </ul>
+      </nav>
+      <div class="burger__icon">
+        <span></span>
       </div>
     </header>
     <main>
@@ -61,18 +78,18 @@
             Start 14 Days Trial
           </a>
           <article class="hero-section__statistics">
-            <div class="hero-section__statistics-wrapper-wrapper">
-              <div class="hero-section__statistics-wrapper">
+            <div class="hero-section__statistics-list">
+              <div class="hero-section__statistics-item">
                 <h2 class="hero-section__statistics-title">15k+</h2>
-                <p class="hero-section__statistics-text">Active users</p>
+                <p class="hero-section__statistics-text">Active user</p>
               </div>
-              <div class="hero-section__statistics-wrapper">
+              <div class="hero-section__statistics-item">
                 <h2 class="hero-section__statistics-title">30k</h2>
-                <p class="hero-section__statistics-text">Total Downloads</p>
+                <p class="hero-section__statistics-text">Total Download</p>
               </div>
-              <div class="hero-section__statistics-wrapper">
+              <div class="hero-section__statistics-item">
                 <h2 class="hero-section__statistics-title">10k</h2>
-                <p class="hero-section__statistics-text">Customers</p>
+                <p class="hero-section__statistics-text">Customer</p>
               </div>
             </div>
           </article>
@@ -192,7 +209,10 @@
       </section>
       <section class="tracker-section" id="tracker">
         <div class="tracker-section__wrapper">
-          <h2 class="tracker-section__title">How our Tracker work for you</h2>
+          <h2 class="tracker-section__title">
+            How our <span class="tracker-section__title--accent">Tracker</span>
+            work for you
+          </h2>
           <p class="tracker-section__text">
             An enim nullam tempor sapien gravida donec enim ipsum porta justo
             congue<br />
@@ -339,19 +359,19 @@
         <div class="partners-section__container">
           <ul class="partners-section__cards">
             <li class="partners-section__card soft-pink">
-              <img src="./assets/images/1.png" />
+              <img src="./assets/images/1.png" alt="Partner logo 1" />
             </li>
             <li class="partners-section__card soft-yellow">
-              <img src="./assets/images/3.png" />
+              <img src="./assets/images/3.png" alt="Partner logo 2" />
             </li>
             <li class="partners-section__card soft-green">
-              <img src="./assets/images/2.png" />
+              <img src="./assets/images/2.png" alt="Partner logo 3" />
             </li>
             <li class="partners-section__card soft-blue">
-              <img src="./assets/images/4.png" />
+              <img src="./assets/images/4.png" alt="Partner logo 4" />
             </li>
             <li class="partners-section__card soft-lavender">
-              <img src="./assets/images/5.png" />
+              <img src="./assets/images/5.png" alt="Partner logo 5" />
             </li>
           </ul>
           <div class="partners-section__content">
@@ -570,7 +590,6 @@
               </div>
             </div>
 
-            <!-- Пагинация -->
             <div class="slider__pagination swiper-pagination"></div>
           </div>
 
@@ -620,12 +639,24 @@
               card. we wont chargeyou for our debit card.
             </p>
 
-            <a href="" target="_blank" class="get-it-section__button">
+            <a
+              href="https://www.apple.com/app-store/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="get-it-section__button"
+              aria-label="Download on the App Store"
+            >
               <svg class="button-type-1">
                 <use href="./assets/svg/get-it.svg#icon-AppStore"></use>
               </svg>
             </a>
-            <a href="" target="_blank" class="get-it-section__button">
+            <a
+              href="https://play.google.com/store"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="get-it-section__button"
+              aria-label="Get it on Google Play"
+            >
               <svg class="button-type-1">
                 <use href="./assets/svg/get-it.svg#icon-GooglePlay"></use>
               </svg>
@@ -641,9 +672,9 @@
       <div class="footer__container">
         <div class="footer__links">
           <div class="footer__logo">
-            <img src="./assets/images/Logo.png" alt="logo" />
+            <img src="./assets/images/Logo.png" alt="SaaSto logo" />
           </div>
-          <nav class="footer__nav">
+          <nav class="footer__nav" aria-label="Footer navigation">
             <ul>
               <li><a class="footer__nav-link" href="#features">Features</a></li>
               <li>
@@ -686,34 +717,34 @@
         </div>
       </div>
     </footer>
-    <div class="modal">
+    <div class="modal modal-login">
       <div class="modal__login-wrapper">
         <form class="modal__login-form">
           <div class="modal__login-title-wrapper">
             <h2 class="modal__login-title">login</h2>
-            <span class="modal__closes">
+            <button class="modal__closes" type="button" aria-label="Close modal">
               <svg>
                 <use href="./assets/svg/symbol-defs.svg#icon-cross"></use>
               </svg>
-            </span>
+            </button>
           </div>
           <div class="modal__login-email">
-            <label for="email">Email</label>
+            <label for="login-email">Email</label>
             <input
               class="modal__login-email--focus"
               type="email"
-              id="email"
+              id="login-email"
               name="email"
               required
             />
           </div>
 
           <div class="modal__login-password">
-            <label for="email">Password</label>
+            <label for="login-password">Password</label>
             <input
               class="modal__login-password--focus"
               type="password"
-              id="password"
+              id="login-password"
               name="password"
               required
             />
@@ -730,7 +761,7 @@
             <button class="modal__login-button button-type-2" type="submit">
               login
             </button>
-            <a class="modal__login-link" href="">Forgot Password?</a>
+            <a class="modal__login-link" href="#">Forgot Password?</a>
           </div>
 
           <p class="modal__login-text modal__login-text--decor">or</p>
@@ -758,38 +789,38 @@
             </a>
           </div>
           <p class="modal__login-text">Need an account?</p>
-          <a class="modal__login-sing-up" href="">sign up</a>
+          <button class="modal__login-sing-up" type="button">sign up</button>
         </form>
       </div>
     </div>
-    <div class="modal">
+    <div class="modal modal-sign-up">
       <div class="modal__sign-up-wrapper">
         <form class="modal__sign-up-form">
           <div class="modal__sign-up-title-wrapper">
             <h2 class="modal__sign-up-title">sign up</h2>
-            <span class="modal__closes">
+            <button class="modal__closes" type="button" aria-label="Close modal">
               <svg>
                 <use href="./assets/svg/symbol-defs.svg#icon-cross"></use>
               </svg>
-            </span>
+            </button>
           </div>
           <div class="modal__sign-up-email">
-            <label for="email">Email</label>
+            <label for="sign-up-email">Email</label>
             <input
               class="modal__sign-up-email--focus"
               type="email"
-              id="email"
+              id="sign-up-email"
               name="email"
               required
             />
           </div>
 
           <div class="modal__sign-up-password">
-            <label for="password">Password</label>
+            <label for="sign-up-password">Password</label>
             <input
               class="modal__sign-up-password--focus"
               type="password"
-              id="password"
+              id="sign-up-password"
               name="password"
               required
             />
@@ -846,17 +877,17 @@
         </form>
       </div>
     </div>
-    <div class="modal">
+    <div class="modal modal-price-selection">
       <div class="modal__price-selection-wrapper">
         <div class="modal__price-selection-logo-wrapper">
           <div class="modal__price-selection-logo">
-            <img src="./assets/images/Logo.png" alt="logo" />
+            <img src="./assets/images/Logo.png" alt="SaaSto logo" />
           </div>
-          <span class="modal__closes">
+          <button class="modal__closes" type="button" aria-label="Close modal">
             <svg>
               <use href="./assets/svg/symbol-defs.svg#icon-cross"></use>
             </svg>
-          </span>
+          </button>
         </div>
         <h2 class="modal__price-selection-title">
           Are you interested in our application?
@@ -868,12 +899,14 @@
 
         <div class="modal__price-selection-button-wrapper">
           <button
-            class="modal__price-selection-button button-type-1 button-login"
+            class="modal__price-selection-button button-price-login"
+            type="button"
           >
-            Login
+            Log in
           </button>
           <button
-            class="modal__price-selection-button button-type-1 button-sign-up"
+            class="modal__price-selection-button button-price-sign-up"
+            type="button"
           >
             Sign up
           </button>
@@ -886,19 +919,39 @@
         </p>
 
         <div class="modal__price-selection-button-wrapper">
-          <a href="" target="_blank" class="modal__price-selection-button">
-            <svg class="button-type-1">
+          <a
+            href="https://www.apple.com/app-store/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="modal__price-selection-button"
+            aria-label="Download from App Store"
+          >
+            <svg>
               <use href="./assets/svg/get-it.svg#icon-AppStore"></use>
             </svg>
           </a>
-          <a href="" target="_blank" class="modal__price-selection-button">
-            <svg class="button-type-1">
+          <a
+            href="https://play.google.com/store"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="modal__price-selection-button"
+            aria-label="Download from Google Play"
+          >
+            <svg>
               <use href="./assets/svg/get-it.svg#icon-GooglePlay"></use>
             </svg>
           </a>
         </div>
       </div>
     </div>
+    <button id="back-to-top" class="back-to-top" type="button">
+      <img
+        src="./assets/icon/стрелка-вверх-64.png"
+        alt="Back to top"
+        loading="lazy"
+      />
+    </button>
+    <script src="./js/burger_menu.js"></script>
     <script src="./js/open_modal.js"></script>
     <script src="./js/swiper.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
