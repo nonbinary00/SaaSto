@@ -135,8 +135,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     top: 270px;
-    left: -80px;
-    z-index: 3;
+    left: -140px;
+    z-index: 1;
 
     @media (max-width: 1130px) {
       display: none;
@@ -154,8 +154,8 @@
     background-repeat: no-repeat;
     background-size: contain;
     top: 35px;
-    right: 930px;
-    z-index: 3;
+    left: 220px;
+    z-index: 1;
 
     @media (max-width: 1130px) {
       display: none;
@@ -165,7 +165,10 @@
 
 .tracker-section__options {
   flex: 1 1 50%;
-  max-width: 48%;
+  max-width: 46%;
+  padding-right: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .tracker-section-list {
@@ -181,9 +184,9 @@
     @include adaptive-clamp('gap', 18, 48);
 
     &--offset {
-      transform: translateX(160px);
+      transform: translateX(72px);
 
-      @media (max-width: 1110px) {
+      @media (max-width: 1280px) {
         transform: translateX(0);
       }
     }
@@ -223,8 +226,10 @@
 
 .statistics {
   flex: 1 1 50%;
-  max-width: 50%;
+  max-width: 52%;
   margin-top: -72px;
+  position: relative;
+  z-index: 2;
 
   @media (max-width: 1110px) {
     margin-top: 0;

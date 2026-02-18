@@ -61,6 +61,16 @@ p {
   font-family: "Inter", sans-serif;
 }
 
+h1,
+h2,
+h3 {
+  text-decoration-line: underline;
+  text-decoration-color: #ff553e;
+  text-decoration-thickness: 0.14em;
+  text-underline-offset: -0.06em;
+  text-decoration-skip-ink: none;
+}
+
 [class*=__container] {
   margin: 0 auto;
 }
@@ -360,7 +370,7 @@ p {
   bottom: -1px;
   margin-top: 200px;
 }
-.hero-section__statistics-wrapper {
+.hero-section__statistics-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -370,6 +380,9 @@ p {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+}
+.hero-section__statistics-item {
+  text-align: center;
 }
 .hero-section__statistics-title {
   font-size: clamp(48px, 64px - 16 * (100vw - 320px) / 1980, 64px);
@@ -590,8 +603,8 @@ p {
 }
 .reporting-section__img-menu {
   position: relative;
-  top: -27%;
-  left: 24%;
+  top: -21%;
+  left: 34%;
 }
 
 .tracker-section {
@@ -733,8 +746,8 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
   top: 270px;
-  left: -80px;
-  z-index: 3;
+  left: -140px;
+  z-index: 1;
 }
 @media (max-width: 1130px) {
   .dashboard::after {
@@ -752,8 +765,8 @@ p {
   background-repeat: no-repeat;
   background-size: contain;
   top: 35px;
-  right: 930px;
-  z-index: 3;
+  left: 220px;
+  z-index: 1;
 }
 @media (max-width: 1130px) {
   .dashboard::before {
@@ -763,7 +776,10 @@ p {
 
 .tracker-section__options {
   flex: 1 1 50%;
-  max-width: 48%;
+  max-width: 46%;
+  padding-right: 20px;
+  position: relative;
+  z-index: 2;
 }
 
 .tracker-section-list {
@@ -777,9 +793,9 @@ p {
   gap: clamp(18px, 18px + (48 - 18) * (100vw - 320px) / 1660, 48px);
 }
 .tracker-section-list__card--offset {
-  transform: translateX(160px);
+  transform: translateX(72px);
 }
-@media (max-width: 1110px) {
+@media (max-width: 1280px) {
   .tracker-section-list__card--offset {
     transform: translateX(0);
   }
@@ -809,8 +825,10 @@ p {
 
 .statistics {
   flex: 1 1 50%;
-  max-width: 50%;
+  max-width: 52%;
   margin-top: -72px;
+  position: relative;
+  z-index: 2;
 }
 @media (max-width: 1110px) {
   .statistics {
