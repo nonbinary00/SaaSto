@@ -41,17 +41,18 @@
 
   &__button {
     margin-right: 20px;
-    & svg {
-      margin-top: 48px;
-      width: 195px;
-      height: 75px;
-      border-radius: 40px;
-      fill: $color-coral;
+  }
 
-      &:hover {
-        fill: $color-white;
-      }
-    }
+  &__button svg {
+    margin-top: 48px;
+    width: 195px;
+    height: 75px;
+    border-radius: 40px;
+    fill: $color-coral;
+  }
+
+  &__button svg:hover {
+    fill: $color-white;
   }
 
   &__phone {

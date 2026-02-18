@@ -13,7 +13,7 @@
   }
 
   &__title {
-    width: 800px;
+    max-width: 800px;
     margin: 0 auto;
     font-weight: 700;
     font-size: $fs-64-28;
@@ -51,7 +51,7 @@
     bottom: -1px;
     margin-top: 200px;
   }
-  &__statistics-wrapper-wrapper {
+  &__statistics-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;

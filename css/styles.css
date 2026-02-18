@@ -17,6 +17,7 @@ html {
 
 body {
   max-width: 1920px;
+  height: 100%;
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
@@ -50,14 +51,6 @@ a {
 ul,
 ol {
   list-style: none;
-}
-
-body {
-  max-width: 1920px;
-  height: 100%;
-  margin: 0 auto;
-  font-family: "Poppins", sans-serif;
-  overflow-x: hidden;
 }
 
 body.no-scroll {
@@ -331,7 +324,7 @@ p {
   text-align: center;
 }
 .hero-section__title {
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   font-weight: 700;
   font-size: clamp(28px, 28px + 36 * (100vw - 320px) / 1980, 64px);
@@ -367,7 +360,7 @@ p {
   bottom: -1px;
   margin-top: 200px;
 }
-.hero-section__statistics-wrapper-wrapper {
+.hero-section__statistics-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,7 +465,7 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
-  height: 816px;
+  min-height: 816px;
 }
 .reporting-section__wrapper-content {
   max-width: 568px;
