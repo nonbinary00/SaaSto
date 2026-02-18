@@ -61,12 +61,8 @@
     gap: 120px;
     padding: 56px 0 42px;
     background-color: $color-white;
-    border-top-right-radius: 18px;
+    border-top-right-radius: 120px;
     overflow: hidden;
-    background-image: url(../assets/images/background_hero-section_statistics.png);
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
   }
 
   &__statistics-item {
